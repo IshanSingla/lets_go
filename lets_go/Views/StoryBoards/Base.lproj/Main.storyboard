@@ -568,7 +568,7 @@
         <!--Find Ride-->
         <scene sceneID="MQl-iM-fWK">
             <objects>
-                <viewController title="Find Ride" id="Vyl-cs-fEN" sceneMemberID="viewController">
+                <viewController title="Find Ride" id="Vyl-cs-fEN" customClass="FindRideViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rl3-K9-pfP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -908,7 +908,7 @@
         <!--Chat-->
         <scene sceneID="ONA-du-2uu">
             <objects>
-                <viewController title="Chat" id="WHP-t6-qav" sceneMemberID="viewController">
+                <viewController title="Chat" id="WHP-t6-qav" customClass="ChatsViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eb-t4-COt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -934,7 +934,7 @@
         <!--Rides-->
         <scene sceneID="90N-EU-9gS">
             <objects>
-                <viewController title="Rides" id="F1w-e9-Fdt" sceneMemberID="viewController">
+                <viewController title="Rides" id="F1w-e9-Fdt" customClass="MyRideViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="38V-eZ-eUf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -968,7 +968,7 @@
         <!--Bookings Detsils page-->
         <scene sceneID="HHR-OA-h8T">
             <objects>
-                <viewController title="Bookings Detsils page" id="QSZ-qi-htL" sceneMemberID="viewController">
+                <viewController title="Bookings Detsils page" id="QSZ-qi-htL" customClass="BookingViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JhC-6S-utg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -984,7 +984,7 @@
         <!--Post Ride-->
         <scene sceneID="prl-N7-ApP">
             <objects>
-                <viewController title="Post Ride" id="LUe-GK-y8D" sceneMemberID="viewController">
+                <viewController title="Post Ride" id="LUe-GK-y8D" customClass="CreateRideViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0SP-HX-bd8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -997,10 +997,10 @@
             </objects>
             <point key="canvasLocation" x="3879" y="2788"/>
         </scene>
-        <!--Bookings Detsils page-->
+        <!--Publish Detsils page-->
         <scene sceneID="faE-51-wEs">
             <objects>
-                <viewController title="Bookings Detsils page" id="Zid-31-A5E" sceneMemberID="viewController">
+                <viewController title="Publish Detsils page" id="Zid-31-A5E" customClass="PublishViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fb7-E4-t0Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1013,10 +1013,10 @@
             </objects>
             <point key="canvasLocation" x="5335" y="2788"/>
         </scene>
-        <!--InPerson Chat-->
+        <!--Conversation-->
         <scene sceneID="xfs-iC-Qqx">
             <objects>
-                <viewController title="InPerson Chat" id="4eV-x8-Thc" sceneMemberID="viewController">
+                <viewController title="Conversation" id="4eV-x8-Thc" customClass="ConversationViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A9G-C8-GPz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
