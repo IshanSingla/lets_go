@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUV-ti-8BD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIW-h2-JRV">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -12,7 +12,7 @@
         <!--Login (Enter Email)-->
         <scene sceneID="8Gl-5P-aGm">
             <objects>
-                <viewController title="Login (Enter Email)" id="Qam-bH-GsG" sceneMemberID="viewController">
+                <viewController title="Login (Enter Email)" id="Qam-bH-GsG" customClass="AuthViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kTL-kZ-HYo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
         <!--Onboarding-2-->
         <scene sceneID="0CG-nw-fVw">
             <objects>
-                <viewController title="Onboarding-2" id="fYs-zD-NJe" sceneMemberID="viewController">
+                <viewController title="Onboarding-2" id="fYs-zD-NJe" customClass="OnBoardingViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mwZ-9w-kLk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,7 +296,7 @@
         <!--Onboarding-3-->
         <scene sceneID="Ok1-Wi-alN">
             <objects>
-                <viewController title="Onboarding-3" id="YHF-9N-xBx" sceneMemberID="viewController">
+                <viewController title="Onboarding-3" id="YHF-9N-xBx" customClass="OnBoardingViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2wG-3G-rj9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1029,6 +1029,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dvs-CA-5M7"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ff8-SV-LNV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
