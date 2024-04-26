@@ -10,6 +10,7 @@
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
 		AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */; };
 		AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0335212BDAB8F500F0C796 /* PublishViewController.swift */; };
+		AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */; };
 		AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98052BDA9F2F009DD59D /* AppDelegate.swift */; };
 		AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98072BDA9F2F009DD59D /* SceneDelegate.swift */; };
 		AF2C980D2BDA9F2F009DD59D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AF2C980C2BDA9F2F009DD59D /* Base */; };
@@ -54,6 +55,7 @@
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
 		AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		AF0335212BDAB8F500F0C796 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF2C98022BDA9F2F009DD59D /* lets_go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lets_go.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C98052BDA9F2F009DD59D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF2C98072BDA9F2F009DD59D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */,
+				AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */,
+			);
+			path = "Onboarding-Auth";
+			sourceTree = "<group>";
+		};
+		AF0335262BDAD90600F0C796 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */,
+				AF2C983A2BDAA01E009DD59D /* FindRideViewController.swift */,
+				AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AF0335272BDAD94400F0C796 /* My Ride */ = {
+			isa = PBXGroup;
+			children = (
+				AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */,
+				AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */,
+				AF0335212BDAB8F500F0C796 /* PublishViewController.swift */,
+			);
+			path = "My Ride";
+			sourceTree = "<group>";
+		};
+		AF0335282BDAD96800F0C796 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C98402BDAA053009DD59D /* ConversationViewController.swift */,
+				AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AF0335292BDAD98700F0C796 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		AF2C97F92BDA9F2F009DD59D = {
 			isa = PBXGroup;
 			children = (
@@ -159,15 +206,11 @@
 		AF2C98352BDA9FD7009DD59D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */,
-				AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */,
-				AF2C983A2BDAA01E009DD59D /* FindRideViewController.swift */,
-				AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */,
-				AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */,
-				AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */,
-				AF0335212BDAB8F500F0C796 /* PublishViewController.swift */,
-				AF2C98402BDAA053009DD59D /* ConversationViewController.swift */,
-				AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */,
+				AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */,
+				AF0335262BDAD90600F0C796 /* Home */,
+				AF0335272BDAD94400F0C796 /* My Ride */,
+				AF0335292BDAD98700F0C796 /* Profile */,
+				AF0335282BDAD96800F0C796 /* Chat */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -353,6 +396,7 @@
 			files = (
 				AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */,
 				AF2C983F2BDAA044009DD59D /* CreateRideViewController.swift in Sources */,
+				AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */,
 				AF2C983B2BDAA01E009DD59D /* FindRideViewController.swift in Sources */,
 				AF2C98492BDAA19A009DD59D /* booking.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
@@ -552,11 +596,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lets_go/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lets Go";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,11 +625,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lets_go/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lets Go";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
