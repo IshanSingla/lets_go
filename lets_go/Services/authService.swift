@@ -19,9 +19,30 @@ class AuthService {
                          college: nil,
                          createdAt: Date(),
                          updatedAt: Date()),
-        User(id: "2110990648",
-                         email: "ishan0648.be21@chitkara.edu.in",
-                         rollnumber: "2110990648",
+        User(id: "2110991129",
+                         email: "rajit1129.be21@chitkara.edu.in",
+                         rollnumber: "2110991129",
+                         department: "Computer Science",
+                         address: "123 Main St, City",
+                         vehicleDetails: "Toyota Camry",
+                         collegeId: "1234",
+                         college: nil,
+                         createdAt: Date(),
+             updatedAt: Date()),
+        User(id: "2110990749",
+                         email: "kaushiv0749.be21@chitkara.edu.in",
+                         rollnumber: "2110990749",
+                         department: "Computer Science",
+                         address: "123 Main St, City",
+                         vehicleDetails: "Toyota Camry",
+                         collegeId: "1234",
+                         college: nil,
+                         createdAt: Date(),
+             updatedAt: Date()),
+        
+        User(id: "2110991065",
+                         email: "prince1065.be21@chitkara.edu.in",
+                         rollnumber: "2110991065",
                          department: "Computer Science",
                          address: "123 Main St, City",
                          vehicleDetails: "Toyota Camry",
@@ -31,14 +52,30 @@ class AuthService {
                          updatedAt: Date())
     ]
     
-    var userOtps: [UserOtp]=[UserOtp(email: "ishan0648.be21@chitkara.edu.in",
+    var userOtps: [UserOtp]=[
+        
+        UserOtp(email: "ishan0648.be21@chitkara.edu.in",
+                                    otp: "123456",
+                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    createdAt: Date(),
+                                    updatedAt: Date()),
+        UserOtp(email: "rajit1129.be21@chitkara.edu.in",
+                                    otp: "123456",
+                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    createdAt: Date(),
+                                    updatedAt: Date()),
+        UserOtp(email: "prince1065.be21@chitkara.edu.in",
+                                    otp: "123456",
+                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    createdAt: Date(),
+                                    updatedAt: Date()),
+        UserOtp(email: "kaushiv0749.be21@chitkara.edu.in",
                                     otp: "123456",
                                     expiry: Date().addingTimeInterval(600), // 10 minutes from now
                                     createdAt: Date(),
                                     updatedAt: Date()),
                             
     ]
-    
     func sendOtp(_ email: String)throws -> Bool {
         guard let userOtp = userOtps.first(where: { $0.email == email }) else {
             throw AuthServiceError.otpVerificationFailed
