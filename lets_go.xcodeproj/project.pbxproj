@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1D448C2BDFC23200E02190 /* FindTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D448B2BDFC23200E02190 /* FindTableViewController.swift */; };
+		3F1D448E2BDFC75600E02190 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D448D2BDFC75600E02190 /* PostTableViewController.swift */; };
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
 		AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */; };
 		AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0335212BDAB8F500F0C796 /* PublishViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1D448B2BDFC23200E02190 /* FindTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTableViewController.swift; sourceTree = "<group>"; };
+		3F1D448D2BDFC75600E02190 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
 		AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		AF0335212BDAB8F500F0C796 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		AF2C97F92BDA9F2F009DD59D = {
 			isa = PBXGroup;
 			children = (
+				3F1D448D2BDFC75600E02190 /* PostTableViewController.swift */,
+				3F1D448B2BDFC23200E02190 /* FindTableViewController.swift */,
 				AF2C98042BDA9F2F009DD59D /* lets_go */,
 				AF2C981B2BDA9F31009DD59D /* lets_goTests */,
 				AF2C98252BDA9F31009DD59D /* lets_goUITests */,
@@ -356,6 +362,8 @@
 				AF2C983B2BDAA01E009DD59D /* FindRideViewController.swift in Sources */,
 				AF2C98492BDAA19A009DD59D /* booking.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
+				3F1D448E2BDFC75600E02190 /* PostTableViewController.swift in Sources */,
+				3F1D448C2BDFC23200E02190 /* FindTableViewController.swift in Sources */,
 				AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */,
 				AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */,
 				AF2C98562BDAA25B009DD59D /* authService.swift in Sources */,
