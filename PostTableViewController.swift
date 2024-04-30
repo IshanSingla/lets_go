@@ -43,6 +43,54 @@ class PostTableViewController: UITableViewController {
         }
         return 0
     }
+   
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.black
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        header.textLabel?.frame = CGRect(x: 5, y: 0, width: 300, height: 20)
+    }
+    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let  headerView = UIView()
+//        let label = UILabel()
+//        /*label.font = UIFont.boldSystemFont(ofSize: 18)
+//        label.textColor = UIColor.black
+//        headerView.addSubview(label)*/
+//        
+//        /*if section != 4 {
+//            label.text = "Header\(section + 1)"
+//        }else{
+//            label.text = ""
+//        }*/
+//        if section == 0{
+//            label.text = "Where are you going:"
+//            label.font = UIFont.boldSystemFont(ofSize: 20)
+//            label.textColor = UIColor.black
+//            headerView.addSubview(label)
+//        }
+//        else if section == 1{
+//            label.text = "When?"
+//            label.font = UIFont.boldSystemFont(ofSize: 20)
+//            label.textColor = UIColor.black
+//            headerView.addSubview(label)
+//        }
+//        else if section == 2{
+//            label.text = "Seats Available?"
+//            label.font = UIFont.boldSystemFont(ofSize: 20)
+//            label.textColor = UIColor.black
+//            headerView.addSubview(label)
+//        }else if section == 3{
+//            label.text = "Offer Price:"
+//            label.font = UIFont.boldSystemFont(ofSize: 20)
+//            label.textColor = UIColor.black
+//            headerView.addSubview(label)
+//        }else if section == 4{
+//            label.text = ""
+//        }
+//        return headerView
+//    }
+       
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
