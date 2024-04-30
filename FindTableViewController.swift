@@ -23,12 +23,23 @@ class FindTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0{
+            return 2;
+        }
+        else if section == 1{
+            return 1;
+        }
+        else if section == 2{
+            return 1;
+        }else if section == 3{
+            return 1;
+        }
+        return 0;
     }
 
     /*
