@@ -52,26 +52,27 @@ class AuthService {
                          updatedAt: Date())
     ]
     
+    
     var userOtps: [UserOtp]=[
         
         UserOtp(email: "ishan0648.be21@chitkara.edu.in",
                                     otp: "123456",
-                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    expiry: Date().addingTimeInterval(600),
                                     createdAt: Date(),
                                     updatedAt: Date()),
         UserOtp(email: "rajit1129.be21@chitkara.edu.in",
                                     otp: "123456",
-                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    expiry: Date().addingTimeInterval(600),
                                     createdAt: Date(),
                                     updatedAt: Date()),
         UserOtp(email: "prince1065.be21@chitkara.edu.in",
                                     otp: "123456",
-                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    expiry: Date().addingTimeInterval(600),
                                     createdAt: Date(),
                                     updatedAt: Date()),
         UserOtp(email: "kaushiv0749.be21@chitkara.edu.in",
                                     otp: "123456",
-                                    expiry: Date().addingTimeInterval(600), // 10 minutes from now
+                                    expiry: Date().addingTimeInterval(600),
                                     createdAt: Date(),
                                     updatedAt: Date()),
                             
