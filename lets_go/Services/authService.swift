@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum AuthServiceError: Error {
+    case otpVerificationFailed
+    case userNotFound
+}
+
 class AuthService {
     var users:[User]=[
         User(id: "2110990648",

@@ -26,13 +26,21 @@
 		AF2C983F2BDAA044009DD59D /* CreateRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */; };
 		AF2C98412BDAA053009DD59D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98402BDAA053009DD59D /* ConversationViewController.swift */; };
 		AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */; };
-		AF2C98492BDAA19A009DD59D /* booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98482BDAA19A009DD59D /* booking.swift */; };
-		AF2C984B2BDAA1D0009DD59D /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C984A2BDAA1D0009DD59D /* auth.swift */; };
-		AF2C984D2BDAA1FD009DD59D /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C984C2BDAA1FD009DD59D /* chat.swift */; };
 		AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C984F2BDAA230009DD59D /* bookingService.swift */; };
 		AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98512BDAA23D009DD59D /* publishService.swift */; };
 		AF2C98542BDAA24A009DD59D /* chatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98532BDAA24A009DD59D /* chatService.swift */; };
 		AF2C98562BDAA25B009DD59D /* authService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98552BDAA25B009DD59D /* authService.swift */; };
+		AF8F29652BE1FB11003A5256 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F29642BE1FB11003A5256 /* ChatTableViewCell.swift */; };
+		AF8F29672BE20912003A5256 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F29662BE20912003A5256 /* ConversationTableViewCell.swift */; };
+		AF8F296D2BE24593003A5256 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F296C2BE24593003A5256 /* ProfileViewController.swift */; };
+		AFAB25512BE0F9ED002E756E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25502BE0F9ED002E756E /* User.swift */; };
+		AFAB25532BE0FA2E002E756E /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25522BE0FA2E002E756E /* College.swift */; };
+		AFAB25552BE0FA52002E756E /* UserOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25542BE0FA52002E756E /* UserOtp.swift */; };
+		AFAB25582BE0FCD1002E756E /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25572BE0FCD1002E756E /* Chat.swift */; };
+		AFAB255A2BE0FCED002E756E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25592BE0FCED002E756E /* Message.swift */; };
+		AFAB255C2BE0FD3D002E756E /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB255B2BE0FD3D002E756E /* DBError.swift */; };
+		AFAB255F2BE100CA002E756E /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB255E2BE100CA002E756E /* Publish.swift */; };
+		AFAB25612BE100D3002E756E /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25602BE100D3002E756E /* Booking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,13 +84,21 @@
 		AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRideViewController.swift; sourceTree = "<group>"; };
 		AF2C98402BDAA053009DD59D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
-		AF2C98482BDAA19A009DD59D /* booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booking.swift; sourceTree = "<group>"; };
-		AF2C984A2BDAA1D0009DD59D /* auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
-		AF2C984C2BDAA1FD009DD59D /* chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
 		AF2C984F2BDAA230009DD59D /* bookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookingService.swift; sourceTree = "<group>"; };
 		AF2C98512BDAA23D009DD59D /* publishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publishService.swift; sourceTree = "<group>"; };
 		AF2C98532BDAA24A009DD59D /* chatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatService.swift; sourceTree = "<group>"; };
 		AF2C98552BDAA25B009DD59D /* authService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authService.swift; sourceTree = "<group>"; };
+		AF8F29642BE1FB11003A5256 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		AF8F29662BE20912003A5256 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		AF8F296C2BE24593003A5256 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AFAB25502BE0F9ED002E756E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFAB25522BE0FA2E002E756E /* College.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
+		AFAB25542BE0FA52002E756E /* UserOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOtp.swift; sourceTree = "<group>"; };
+		AFAB25572BE0FCD1002E756E /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		AFAB25592BE0FCED002E756E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AFAB255B2BE0FD3D002E756E /* DBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
+		AFAB255E2BE100CA002E756E /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
+		AFAB25602BE100D3002E756E /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +159,10 @@
 		AF0335282BDAD96800F0C796 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C98402BDAA053009DD59D /* ConversationViewController.swift */,
 				AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */,
+				AF8F29642BE1FB11003A5256 /* ChatTableViewCell.swift */,
+				AF2C98402BDAA053009DD59D /* ConversationViewController.swift */,
+				AF8F29662BE20912003A5256 /* ConversationTableViewCell.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -152,6 +170,7 @@
 		AF0335292BDAD98700F0C796 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F296C2BE24593003A5256 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -248,9 +267,10 @@
 		AF2C98472BDAA18B009DD59D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C98482BDAA19A009DD59D /* booking.swift */,
-				AF2C984A2BDAA1D0009DD59D /* auth.swift */,
-				AF2C984C2BDAA1FD009DD59D /* chat.swift */,
+				AFAB255B2BE0FD3D002E756E /* DBError.swift */,
+				AFAB255D2BE1008F002E756E /* Booking */,
+				AFAB254F2BE0F9DB002E756E /* auth */,
+				AFAB25562BE0FCBD002E756E /* Chat */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +284,34 @@
 				AF2C98552BDAA25B009DD59D /* authService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AFAB254F2BE0F9DB002E756E /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFAB25502BE0F9ED002E756E /* User.swift */,
+				AFAB25522BE0FA2E002E756E /* College.swift */,
+				AFAB25542BE0FA52002E756E /* UserOtp.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		AFAB25562BE0FCBD002E756E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AFAB25572BE0FCD1002E756E /* Chat.swift */,
+				AFAB25592BE0FCED002E756E /* Message.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AFAB255D2BE1008F002E756E /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				AFAB255E2BE100CA002E756E /* Publish.swift */,
+				AFAB25602BE100D3002E756E /* Booking.swift */,
+			);
+			path = Booking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +452,9 @@
 				3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
 				AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */,
+				AF8F296D2BE24593003A5256 /* ProfileViewController.swift in Sources */,
+				AFAB25532BE0FA2E002E756E /* College.swift in Sources */,
+				AF8F29652BE1FB11003A5256 /* ChatTableViewCell.swift in Sources */,
 				AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */,
 				AF2C98562BDAA25B009DD59D /* authService.swift in Sources */,
 				AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */,
@@ -411,12 +462,20 @@
 				AF2C984D2BDAA1FD009DD59D /* chat.swift in Sources */,
 				AF2C984B2BDAA1D0009DD59D /* auth.swift in Sources */,
 				AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */,
+				AFAB25552BE0FA52002E756E /* UserOtp.swift in Sources */,
 				AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */,
 				AF2C98392BDAA00B009DD59D /* OnBoardingViewController.swift in Sources */,
+				AFAB255F2BE100CA002E756E /* Publish.swift in Sources */,
 				AF2C98542BDAA24A009DD59D /* chatService.swift in Sources */,
+				AFAB255A2BE0FCED002E756E /* Message.swift in Sources */,
+				AFAB25582BE0FCD1002E756E /* Chat.swift in Sources */,
+				AFAB25612BE100D3002E756E /* Booking.swift in Sources */,
 				AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */,
 				AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */,
+				AF8F29672BE20912003A5256 /* ConversationTableViewCell.swift in Sources */,
 				AF2C98412BDAA053009DD59D /* ConversationViewController.swift in Sources */,
+				AFAB255C2BE0FD3D002E756E /* DBError.swift in Sources */,
+				AFAB25512BE0F9ED002E756E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
