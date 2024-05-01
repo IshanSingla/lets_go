@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48F932BE210B80032CB47 /* LoginViewController.swift */; };
-		3FC48F962BE23B020032CB47 /* completeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */; };
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
 		AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */; };
 		AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0335212BDAB8F500F0C796 /* PublishViewController.swift */; };
@@ -23,6 +21,7 @@
 		AF2C98292BDA9F31009DD59D /* lets_goUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98282BDA9F31009DD59D /* lets_goUITestsLaunchTests.swift */; };
 		AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */; };
 		AF2C98392BDAA00B009DD59D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */; };
+		AF2C983B2BDAA01E009DD59D /* FindRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C983A2BDAA01E009DD59D /* FindRideViewController.swift */; };
 		AF2C983F2BDAA044009DD59D /* CreateRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */; };
 		AF2C98412BDAA053009DD59D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98402BDAA053009DD59D /* ConversationViewController.swift */; };
 		AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */; };
@@ -61,8 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3FC48F932BE210B80032CB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeInfoViewController.swift; sourceTree = "<group>"; };
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
 		AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		AF0335212BDAB8F500F0C796 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +78,7 @@
 		AF2C98282BDA9F31009DD59D /* lets_goUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lets_goUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		AF2C983A2BDAA01E009DD59D /* FindRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRideViewController.swift; sourceTree = "<group>"; };
 		AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRideViewController.swift; sourceTree = "<group>"; };
 		AF2C98402BDAA053009DD59D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +129,6 @@
 			children = (
 				AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */,
 				AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */,
-				3FC48F932BE210B80032CB47 /* LoginViewController.swift */,
-				3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */,
 			);
 			path = "Onboarding-Auth";
 			sourceTree = "<group>";
@@ -141,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */,
+				AF2C983A2BDAA01E009DD59D /* FindRideViewController.swift */,
 				AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */,
 			);
 			path = Home;
@@ -448,8 +445,7 @@
 				AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */,
 				AF2C983F2BDAA044009DD59D /* CreateRideViewController.swift in Sources */,
 				AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */,
-				AF2C98492BDAA19A009DD59D /* booking.swift in Sources */,
-				3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */,
+				AF2C983B2BDAA01E009DD59D /* FindRideViewController.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
 				AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */,
 				AF8F296D2BE24593003A5256 /* ProfileViewController.swift in Sources */,
@@ -458,9 +454,6 @@
 				AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */,
 				AF2C98562BDAA25B009DD59D /* authService.swift in Sources */,
 				AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */,
-				3FC48F962BE23B020032CB47 /* completeInfoViewController.swift in Sources */,
-				AF2C984D2BDAA1FD009DD59D /* chat.swift in Sources */,
-				AF2C984B2BDAA1D0009DD59D /* auth.swift in Sources */,
 				AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */,
 				AFAB25552BE0FA52002E756E /* UserOtp.swift in Sources */,
 				AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */,
