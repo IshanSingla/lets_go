@@ -11,6 +11,7 @@
 		3F1D448E2BDFC75600E02190 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D448D2BDFC75600E02190 /* PostTableViewController.swift */; };
 		3FC9A9382BE0EDA00004D9C5 /* ReplicatemydataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9A9372BE0EDA00004D9C5 /* ReplicatemydataViewController.swift */; };
 		3FD90D422BE202E100D4519E /* bookRideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD90D412BE202E100D4519E /* bookRideTableViewController.swift */; };
+		3FF56DA32BE3B43C00802B98 /* replicateRideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF56DA22BE3B43C00802B98 /* replicateRideTableViewController.swift */; };
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
 		AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */; };
 		AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0335212BDAB8F500F0C796 /* PublishViewController.swift */; };
@@ -59,6 +60,7 @@
 		3F1D448D2BDFC75600E02190 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		3FC9A9372BE0EDA00004D9C5 /* ReplicatemydataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatemydataViewController.swift; sourceTree = "<group>"; };
 		3FD90D412BE202E100D4519E /* bookRideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookRideTableViewController.swift; sourceTree = "<group>"; };
+		3FF56DA22BE3B43C00802B98 /* replicateRideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = replicateRideTableViewController.swift; sourceTree = "<group>"; };
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
 		AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		AF0335212BDAB8F500F0C796 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
@@ -114,12 +116,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF2C97F92BDA9F2F009DD59D = {
+		3FF56DA12BE349EE00802B98 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				3FF56DA22BE3B43C00802B98 /* replicateRideTableViewController.swift */,
 				3FC9A9372BE0EDA00004D9C5 /* ReplicatemydataViewController.swift */,
 				3F1D448D2BDFC75600E02190 /* PostTableViewController.swift */,
 				3F1D448B2BDFC23200E02190 /* FindTableViewController.swift */,
+				3FD90D412BE202E100D4519E /* bookRideTableViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AF2C97F92BDA9F2F009DD59D = {
+			isa = PBXGroup;
+			children = (
 				AF2C98042BDA9F2F009DD59D /* lets_go */,
 				AF2C981B2BDA9F31009DD59D /* lets_goTests */,
 				AF2C98252BDA9F31009DD59D /* lets_goUITests */,
@@ -170,6 +181,7 @@
 		AF2C98352BDA9FD7009DD59D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FF56DA12BE349EE00802B98 /* New Group */,
 				AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */,
 				AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */,
 				AF2C983A2BDAA01E009DD59D /* FindRideViewController.swift */,
@@ -196,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				AF2C980B2BDA9F2F009DD59D /* Main.storyboard */,
-				3FD90D412BE202E100D4519E /* bookRideTableViewController.swift */,
 				AF2C98102BDA9F31009DD59D /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
@@ -363,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF56DA32BE3B43C00802B98 /* replicateRideTableViewController.swift in Sources */,
 				3FC9A9382BE0EDA00004D9C5 /* ReplicatemydataViewController.swift in Sources */,
 				AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */,
 				AF2C983F2BDAA044009DD59D /* CreateRideViewController.swift in Sources */,

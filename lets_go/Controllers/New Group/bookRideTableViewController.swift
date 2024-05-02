@@ -1,13 +1,13 @@
 //
-//  PostTableViewController.swift
+//  bookRideTableViewController.swift
 //  lets_go
 //
-//  Created by student on 29/04/24.
+//  Created by student on 01/05/24.
 //
 
 import UIKit
 
-class PostTableViewController: UITableViewController {
+class bookRideTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,75 +23,35 @@ class PostTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0{
-            return 2
-        }
-        else if section == 1{
-            return 1
-        }
-        else if section == 2{
-            return 1
-        }else if section == 3{
-            return 1
-        }else if section == 4{
-            return 1
-        }
-        return 0
+        return 6
     }
-   
+    
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black
-        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        header.textLabel?.frame = CGRect(x: 5, y: 0, width: 300, height: 20)
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        header.textLabel?.frame = CGRect(x: 5, y: 0, width: 300, height: 25)
     }
-    
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let  headerView = UIView()
-//        let label = UILabel()
-//        /*label.font = UIFont.boldSystemFont(ofSize: 18)
-//        label.textColor = UIColor.black
-//        headerView.addSubview(label)*/
-//        
-//        /*if section != 4 {
-//            label.text = "Header\(section + 1)"
-//        }else{
-//            label.text = ""
-//        }*/
-//        if section == 0{
-//            label.text = "Where are you going:"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }
-//        else if section == 1{
-//            label.text = "When?"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }
-//        else if section == 2{
-//            label.text = "Seats Available?"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }else if section == 3{
-//            label.text = "Offer Price:"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }else if section == 4{
-//            label.text = ""
-//        }
-//        return headerView
-//    }
-       
 
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath.section == 0 {
+//            cell.isHidden = true
+//        }
+//    }
+//
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.section == 0 {
+//            return 1
+//        } else {
+//            return super.tableView(tableView, heightForRowAt: indexPath)
+//        }
+//    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

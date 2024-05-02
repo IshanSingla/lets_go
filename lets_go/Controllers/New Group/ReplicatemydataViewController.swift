@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReplicatemydataViewController: UIViewController {
+class ReplicatemydataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,13 +22,12 @@ class ReplicatemydataViewController: UIViewController {
            
            // Set up the table view
            tableView.dataSource = self
+           tableView.delegate = self
            
            // Register your custom UITableViewCell class
            tableView.register(TripCell.self, forCellReuseIdentifier: "TripCell")
        }
-   }
 
-   extension ReplicatemydataViewController: UITableViewDataSource {
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            return data.count
        }

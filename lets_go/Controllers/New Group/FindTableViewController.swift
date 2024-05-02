@@ -10,8 +10,12 @@ import UIKit
 class FindTableViewController: UITableViewController {
 
   
+    @IBOutlet weak var seatNo: UILabel!
+    @IBOutlet weak var seatCount: UIStepper!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        seatCount.maximumValue = 3
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,6 +54,22 @@ class FindTableViewController: UITableViewController {
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         header.textLabel?.frame = CGRect(x: 5, y: 0, width: 300, height: 20)
     }
+    
+    func updateCount(){
+        seatNo.text = "\(Int(seatCount.value))"
+    }
+    
+    @IBAction func stepperChanged(_ sender: UIStepper) {
+        updateCount()
+    }
+    
+    
+    
+    
+//    func updateCount(){
+//        numberOfAdultsLabel.text = "\(Int(numberOfAdultStepper.value))"
+//        numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
+//    }
 //    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let  headerView = UIView()
 //        let label = UILabel()
