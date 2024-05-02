@@ -1,14 +1,14 @@
 //
-//  MyRideViewController.swift
+//  AllRideViewController.swift
 //  lets_go
 //
-//  Created by Ishan Singla on 25/04/24.
+//  Created by Ishan Singla on 02/05/24.
 //
 
 import UIKit
 
-class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     @IBOutlet weak var tableView: UITableView!
     var data: [Publish] = [
         Publish(
@@ -144,14 +144,15 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "MyRideSegue", sender: self)
+        self.performSegue(withIdentifier: "BookRideSegue", sender: self)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let BookRideVC = segue.destination as! BookRideViewController
 //       BookRideVC.publish = data[(tableView.indexPathForSelectedRow?.row)!]
-//
+//        
 //    }
 
 

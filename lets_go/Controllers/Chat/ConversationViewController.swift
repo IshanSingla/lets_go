@@ -8,8 +8,8 @@
 import UIKit
 
 class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-    
-    var id:String!
+
+    var chat: Chat!
     
     var data: [Message]=[
         Message(
@@ -64,13 +64,10 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         TableView.separatorStyle = .none
         TableView.dataSource = self
         TableView.delegate = self
-        self.title = id
+        self.title = chat.userId2
         // Do any additional setup after loading the view.
     }
 
-
-
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }

@@ -41,6 +41,14 @@
 		AFAB255C2BE0FD3D002E756E /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB255B2BE0FD3D002E756E /* DBError.swift */; };
 		AFAB255F2BE100CA002E756E /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB255E2BE100CA002E756E /* Publish.swift */; };
 		AFAB25612BE100D3002E756E /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB25602BE100D3002E756E /* Booking.swift */; };
+		AFB480952BE39BD100E9EEEA /* MyRideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB480942BE39BD100E9EEEA /* MyRideTableViewCell.swift */; };
+		AFB480972BE39EFA00E9EEEA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB480962BE39EFA00E9EEEA /* Address.swift */; };
+		AFB4809A2BE3B74200E9EEEA /* replicateRideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB480992BE3B74200E9EEEA /* replicateRideTableViewController.swift */; };
+		AFB4809E2BE3B77100E9EEEA /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4809D2BE3B77100E9EEEA /* PostTableViewController.swift */; };
+		AFB480A02BE3B78B00E9EEEA /* FindTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4809F2BE3B78B00E9EEEA /* FindTableViewController.swift */; };
+		AFB480A22BE3B7AA00E9EEEA /* bookRideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB480A12BE3B7AA00E9EEEA /* bookRideTableViewController.swift */; };
+		AFB480A42BE3BC1400E9EEEA /* AllRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB480A32BE3BC1300E9EEEA /* AllRideViewController.swift */; };
+		AFB480A62BE3E4A400E9EEEA /* BookRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB480A52BE3E4A400E9EEEA /* BookRideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +107,14 @@
 		AFAB255B2BE0FD3D002E756E /* DBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
 		AFAB255E2BE100CA002E756E /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
 		AFAB25602BE100D3002E756E /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		AFB480942BE39BD100E9EEEA /* MyRideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideTableViewCell.swift; sourceTree = "<group>"; };
+		AFB480962BE39EFA00E9EEEA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		AFB480992BE3B74200E9EEEA /* replicateRideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = replicateRideTableViewController.swift; sourceTree = "<group>"; };
+		AFB4809D2BE3B77100E9EEEA /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		AFB4809F2BE3B78B00E9EEEA /* FindTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTableViewController.swift; sourceTree = "<group>"; };
+		AFB480A12BE3B7AA00E9EEEA /* bookRideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookRideTableViewController.swift; sourceTree = "<group>"; };
+		AFB480A32BE3BC1300E9EEEA /* AllRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRideViewController.swift; sourceTree = "<group>"; };
+		AFB480A52BE3E4A400E9EEEA /* BookRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */,
+				AFB480A32BE3BC1300E9EEEA /* AllRideViewController.swift */,
+				AFB480A52BE3E4A400E9EEEA /* BookRideViewController.swift */,
 				AF2C983E2BDAA044009DD59D /* CreateRideViewController.swift */,
 			);
 			path = Home;
@@ -228,6 +246,8 @@
 		AF2C98352BDA9FD7009DD59D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AFB480942BE39BD100E9EEEA /* MyRideTableViewCell.swift */,
+				AFB480982BE3B72D00E9EEEA /* Kaushiv */,
 				AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */,
 				AF0335262BDAD90600F0C796 /* Home */,
 				AF0335272BDAD94400F0C796 /* My Ride */,
@@ -291,6 +311,7 @@
 			children = (
 				AFAB25502BE0F9ED002E756E /* User.swift */,
 				AFAB25522BE0FA2E002E756E /* College.swift */,
+				AFB480962BE39EFA00E9EEEA /* Address.swift */,
 				AFAB25542BE0FA52002E756E /* UserOtp.swift */,
 			);
 			path = auth;
@@ -312,6 +333,17 @@
 				AFAB25602BE100D3002E756E /* Booking.swift */,
 			);
 			path = Booking;
+			sourceTree = "<group>";
+		};
+		AFB480982BE3B72D00E9EEEA /* Kaushiv */ = {
+			isa = PBXGroup;
+			children = (
+				AFB4809F2BE3B78B00E9EEEA /* FindTableViewController.swift */,
+				AFB480A12BE3B7AA00E9EEEA /* bookRideTableViewController.swift */,
+				AFB4809D2BE3B77100E9EEEA /* PostTableViewController.swift */,
+				AFB480992BE3B74200E9EEEA /* replicateRideTableViewController.swift */,
+			);
+			path = Kaushiv;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,8 +479,8 @@
 			files = (
 				AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */,
 				AF2C983F2BDAA044009DD59D /* CreateRideViewController.swift in Sources */,
+				AFB480A02BE3B78B00E9EEEA /* FindTableViewController.swift in Sources */,
 				AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */,
-				AF2C98492BDAA19A009DD59D /* booking.swift in Sources */,
 				3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
 				AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */,
@@ -458,23 +490,28 @@
 				AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */,
 				AF2C98562BDAA25B009DD59D /* authService.swift in Sources */,
 				AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */,
+				AFB480A62BE3E4A400E9EEEA /* BookRideViewController.swift in Sources */,
 				3FC48F962BE23B020032CB47 /* completeInfoViewController.swift in Sources */,
-				AF2C984D2BDAA1FD009DD59D /* chat.swift in Sources */,
-				AF2C984B2BDAA1D0009DD59D /* auth.swift in Sources */,
 				AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */,
 				AFAB25552BE0FA52002E756E /* UserOtp.swift in Sources */,
+				AFB480952BE39BD100E9EEEA /* MyRideTableViewCell.swift in Sources */,
 				AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */,
 				AF2C98392BDAA00B009DD59D /* OnBoardingViewController.swift in Sources */,
+				AFB4809E2BE3B77100E9EEEA /* PostTableViewController.swift in Sources */,
 				AFAB255F2BE100CA002E756E /* Publish.swift in Sources */,
 				AF2C98542BDAA24A009DD59D /* chatService.swift in Sources */,
 				AFAB255A2BE0FCED002E756E /* Message.swift in Sources */,
 				AFAB25582BE0FCD1002E756E /* Chat.swift in Sources */,
 				AFAB25612BE100D3002E756E /* Booking.swift in Sources */,
 				AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */,
+				AFB480972BE39EFA00E9EEEA /* Address.swift in Sources */,
+				AFB480A22BE3B7AA00E9EEEA /* bookRideTableViewController.swift in Sources */,
 				AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */,
+				AFB4809A2BE3B74200E9EEEA /* replicateRideTableViewController.swift in Sources */,
 				AF8F29672BE20912003A5256 /* ConversationTableViewCell.swift in Sources */,
 				AF2C98412BDAA053009DD59D /* ConversationViewController.swift in Sources */,
 				AFAB255C2BE0FD3D002E756E /* DBError.swift in Sources */,
+				AFB480A42BE3BC1400E9EEEA /* AllRideViewController.swift in Sources */,
 				AFAB25512BE0F9ED002E756E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,1014 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "0zI-c0-Enn.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"To:\"; ObjectID = \"0zI-c0-Enn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "To:"
+          }
+        }
+      }
+    },
+    "1Kp-hq-dlk.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"My Rides\"; ObjectID = \"1Kp-hq-dlk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "My Rides"
+          }
+        }
+      }
+    },
+    "2G0-j1-Ilv.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"CH01CD3456, Brezza Maruti Suzuki\"; ObjectID = \"2G0-j1-Ilv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "CH01CD3456, Brezza Maruti Suzuki"
+          }
+        }
+      }
+    },
+    "2Wp-IC-hIZ.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Home\"; ObjectID = \"2Wp-IC-hIZ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Home"
+          }
+        }
+      }
+    },
+    "3Mf-Ep-cui.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Rs. 120\"; ObjectID = \"3Mf-Ep-cui\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rs. 120"
+          }
+        }
+      }
+    },
+    "3Rt-cZ-910.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"To:\"; ObjectID = \"3Rt-cZ-910\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "To:"
+          }
+        }
+      }
+    },
+    "5a9-oE-Qwd.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Seats Needed?\"; ObjectID = \"5a9-oE-Qwd\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Seats Needed?"
+          }
+        }
+      }
+    },
+    "7TM-ZF-bfR.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"All Rides\"; ObjectID = \"7TM-ZF-bfR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "All Rides"
+          }
+        }
+      }
+    },
+    "8L5-em-ZCG.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Request to Book Ride\"; ObjectID = \"8L5-em-ZCG\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Request to Book Ride"
+          }
+        }
+      }
+    },
+    "8L5-em-ZCG.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"8L5-em-ZCG\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "9kb-jk-xaf.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"9kb-jk-xaf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "29B-pV-Opp.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Profile\"; ObjectID = \"29B-pV-Opp\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Profile"
+          }
+        }
+      }
+    },
+    "94P-Zo-NJj.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"When?\"; ObjectID = \"94P-Zo-NJj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "When?"
+          }
+        }
+      }
+    },
+    "atI-mI-1Ws.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"atI-mI-1Ws\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "bBC-D4-IiV.title" : {
+      "comment" : "Class = \"UIViewController\"; title = \"Rides\"; ObjectID = \"bBC-D4-IiV\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rides"
+          }
+        }
+      }
+    },
+    "Bgq-gV-Zav.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"Bgq-gV-Zav\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "bmV-kE-92l.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Where are you going:\"; ObjectID = \"bmV-kE-92l\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Where are you going:"
+          }
+        }
+      }
+    },
+    "BYy-st-LYy.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Post Ride\"; ObjectID = \"BYy-st-LYy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Post Ride"
+          }
+        }
+      }
+    },
+    "BYy-st-LYy.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"BYy-st-LYy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "BzS-J2-fZW.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"My Rides\"; ObjectID = \"BzS-J2-fZW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "My Rides"
+          }
+        }
+      }
+    },
+    "D1a-O3-RTg.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"D1a-O3-RTg\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "dbj-NP-MT1.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"dbj-NP-MT1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "dJm-OC-dfj.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Post Your Ride\"; ObjectID = \"dJm-OC-dfj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Post Your Ride"
+          }
+        }
+      }
+    },
+    "dJm-OC-dfj.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"dJm-OC-dfj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "dPb-zq-ACU.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"CH01CD3456, Brezza Maruti Suzuki\"; ObjectID = \"dPb-zq-ACU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "CH01CD3456, Brezza Maruti Suzuki"
+          }
+        }
+      }
+    },
+    "DpG-gJ-U4M.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Offer Price:\"; ObjectID = \"DpG-gJ-U4M\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Offer Price:"
+          }
+        }
+      }
+    },
+    "eB3-dN-Ljm.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Mon 12 July, 3:30Pm\"; ObjectID = \"eB3-dN-Ljm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mon 12 July, 3:30Pm"
+          }
+        }
+      }
+    },
+    "evc-0I-mft.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"From:\"; ObjectID = \"evc-0I-mft\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "From:"
+          }
+        }
+      }
+    },
+    "EVN-jU-Sv3.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Sector 23 Chandigarh\"; ObjectID = \"EVN-jU-Sv3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sector 23 Chandigarh"
+          }
+        }
+      }
+    },
+    "fr0-53-MBH.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Book Ride\"; ObjectID = \"fr0-53-MBH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Book Ride"
+          }
+        }
+      }
+    },
+    "fxb-Df-cGc.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Ram\"; ObjectID = \"fxb-Df-cGc\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ram"
+          }
+        }
+      }
+    },
+    "Gad-la-0xj.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Post Ride\"; ObjectID = \"Gad-la-0xj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Post Ride"
+          }
+        }
+      }
+    },
+    "Gz6-pT-8tY.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Total price for 1 passenger\"; ObjectID = \"Gz6-pT-8tY\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Total price for 1 passenger"
+          }
+        }
+      }
+    },
+    "HAX-51-i3z.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"HAX-51-i3z\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "hdU-DW-NNH.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Profile\"; ObjectID = \"hdU-DW-NNH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Profile"
+          }
+        }
+      }
+    },
+    "hIq-G5-p02.title" : {
+      "comment" : "Class = \"UIViewController\"; title = \"Conversation\"; ObjectID = \"hIq-G5-p02\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Conversation"
+          }
+        }
+      }
+    },
+    "i00-FR-uFk.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Sector 23 Chandigarh\"; ObjectID = \"i00-FR-uFk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sector 23 Chandigarh"
+          }
+        }
+      }
+    },
+    "i10-GB-9up.title" : {
+      "comment" : "Class = \"UIViewController\"; title = \"Chat\"; ObjectID = \"i10-GB-9up\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Chat"
+          }
+        }
+      }
+    },
+    "iSv-RW-lUp.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Max. 3 in the back \"; ObjectID = \"iSv-RW-lUp\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Max. 3 in the back "
+          }
+        }
+      }
+    },
+    "KFx-wp-39M.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"When?\"; ObjectID = \"KFx-wp-39M\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "When?"
+          }
+        }
+      }
+    },
+    "kMn-1u-BKJ.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Total price for 1 passenger\"; ObjectID = \"kMn-1u-BKJ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Total price for 1 passenger"
+          }
+        }
+      }
+    },
+    "M1E-Fn-u3x.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Chitkara University\"; ObjectID = \"M1E-Fn-u3x\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Chitkara University"
+          }
+        }
+      }
+    },
+    "Mwf-OD-kqB.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Ram\"; ObjectID = \"Mwf-OD-kqB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ram"
+          }
+        }
+      }
+    },
+    "MYb-Ua-AKH.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Mon 12 July, 3:30Pm\"; ObjectID = \"MYb-Ua-AKH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mon 12 July, 3:30Pm"
+          }
+        }
+      }
+    },
+    "mzO-g8-FKJ.title" : {
+      "comment" : "Class = \"UITableViewController\"; title = \"Post Ride\"; ObjectID = \"mzO-g8-FKJ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Post Ride"
+          }
+        }
+      }
+    },
+    "Nfu-NO-hvW.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Search Ride\"; ObjectID = \"Nfu-NO-hvW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Search Ride"
+          }
+        }
+      }
+    },
+    "nJk-R4-eZo.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Max. 3 in the back \"; ObjectID = \"nJk-R4-eZo\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Max. 3 in the back "
+          }
+        }
+      }
+    },
+    "ofk-cz-N03.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Book Ride\"; ObjectID = \"ofk-cz-N03\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Book Ride"
+          }
+        }
+      }
+    },
+    "Oy9-MA-ENv.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"From:\"; ObjectID = \"Oy9-MA-ENv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "From:"
+          }
+        }
+      }
+    },
+    "PLv-HX-GMb.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Inbox\"; ObjectID = \"PLv-HX-GMb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Inbox"
+          }
+        }
+      }
+    },
+    "qHL-wY-Drf.title" : {
+      "comment" : "Class = \"UITableViewController\"; title = \"Find Ride\"; ObjectID = \"qHL-wY-Drf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Find Ride"
+          }
+        }
+      }
+    },
+    "qK0-OH-2ja.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Contact Ram\"; ObjectID = \"qK0-OH-2ja\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Contact Ram"
+          }
+        }
+      }
+    },
+    "QzH-4f-2Au.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"Enter You Message\"; ObjectID = \"QzH-4f-2Au\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Enter You Message"
+          }
+        }
+      }
+    },
+    "rcV-fM-PZK.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Rs. 120\"; ObjectID = \"rcV-fM-PZK\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rs. 120"
+          }
+        }
+      }
+    },
+    "S0F-A7-7Mr.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"0\"; ObjectID = \"S0F-A7-7Mr\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "0"
+          }
+        }
+      }
+    },
+    "sGe-Qp-F2I.title" : {
+      "comment" : "Class = \"UIViewController\"; title = \"Profile\"; ObjectID = \"sGe-Qp-F2I\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Profile"
+          }
+        }
+      }
+    },
+    "sgh-y4-T7S.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"   Chitkara University To Chandigarh\"; ObjectID = \"sgh-y4-T7S\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "   Chitkara University To Chandigarh"
+          }
+        }
+      }
+    },
+    "shw-QC-SAw.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"shw-QC-SAw\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "sS0-Kc-dRf.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"0\"; ObjectID = \"sS0-Kc-dRf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "0"
+          }
+        }
+      }
+    },
+    "STq-ZG-GQl.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"STq-ZG-GQl\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "SvE-Ub-jyy.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Contact Ram\"; ObjectID = \"SvE-Ub-jyy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Contact Ram"
+          }
+        }
+      }
+    },
+    "T2f-de-0AD.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Find Your Ride\"; ObjectID = \"T2f-de-0AD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Find Your Ride"
+          }
+        }
+      }
+    },
+    "T2f-de-0AD.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"T2f-de-0AD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "t43-Rg-Tch.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Ram\"; ObjectID = \"t43-Rg-Tch\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ram"
+          }
+        }
+      }
+    },
+    "TFT-XQ-v0q.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"TFT-XQ-v0q\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "TwE-UJ-4kW.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"User Name\"; ObjectID = \"TwE-UJ-4kW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "User Name"
+          }
+        }
+      }
+    },
+    "V3n-2l-X9x.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Ram\"; ObjectID = \"V3n-2l-X9x\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ram"
+          }
+        }
+      }
+    },
+    "ViQ-xd-uer.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"ViQ-xd-uer\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "VJS-oi-qOE.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Where are you going:\"; ObjectID = \"VJS-oi-qOE\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Where are you going:"
+          }
+        }
+      }
+    },
+    "vUw-x0-HHI.segmentTitles[0]" : {
+      "comment" : "Class = \"UISegmentedControl\"; vUw-x0-HHI.segmentTitles[0] = \"My Bookings\"; ObjectID = \"vUw-x0-HHI\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "My Bookings"
+          }
+        }
+      }
+    },
+    "vUw-x0-HHI.segmentTitles[1]" : {
+      "comment" : "Class = \"UISegmentedControl\"; vUw-x0-HHI.segmentTitles[1] = \"My Publishes\"; ObjectID = \"vUw-x0-HHI\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "My Publishes"
+          }
+        }
+      }
+    },
+    "WHf-nt-fuc.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"Price??\"; ObjectID = \"WHf-nt-fuc\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Price??"
+          }
+        }
+      }
+    },
+    "wRD-on-8sK.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Find Ride\"; ObjectID = \"wRD-on-8sK\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Find Ride"
+          }
+        }
+      }
+    },
+    "wRD-on-8sK.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"wRD-on-8sK\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "WzW-nJ-wl1.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Inbox\"; ObjectID = \"WzW-nJ-wl1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Inbox"
+          }
+        }
+      }
+    },
+    "XU8-Ua-luy.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Chitkara University\"; ObjectID = \"XU8-Ua-luy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Chitkara University"
+          }
+        }
+      }
+    },
+    "YEu-oJ-IBk.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"YEu-oJ-IBk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "yh4-8h-qMk.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Request to Book Ride\"; ObjectID = \"yh4-8h-qMk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Request to Book Ride"
+          }
+        }
+      }
+    },
+    "yh4-8h-qMk.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"yh4-8h-qMk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "yrI-5n-lJG.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"   Today, 1 Passenger\"; ObjectID = \"yrI-5n-lJG\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "   Today, 1 Passenger"
+          }
+        }
+      }
+    },
+    "Z5U-kp-yj3.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Home\"; ObjectID = \"Z5U-kp-yj3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Home"
+          }
+        }
+      }
+    },
+    "zcC-Di-ECz.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Seats Needed?\"; ObjectID = \"zcC-Di-ECz\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Seats Needed?"
+          }
+        }
+      }
+    },
+    "zDo-dt-VjO.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"zDo-dt-VjO\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "ZQ7-Rx-nzA.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"ZQ7-Rx-nzA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

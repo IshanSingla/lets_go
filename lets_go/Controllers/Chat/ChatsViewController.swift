@@ -95,24 +95,19 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let chat = data[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ChatTableViewCell
-        cell.chatImage.image = UIImage(systemName: "person.circle")
         cell.username.text = chat.userId2
         cell.dateTime.text = chat.createdAt?.description
 //
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "Converzation", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let conversationVC = segue.destination as! ConversationViewController
-        conversationVC.id = data[(TavleView.indexPathForSelectedRow?.row)!].userId2
+        let ConversationVC = segue.destination as! ConversationViewController
+        ConversationVC.chat = data[(TavleView.indexPathForSelectedRow?.row)!]
         
     }
 }

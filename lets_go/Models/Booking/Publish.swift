@@ -10,12 +10,14 @@ import Foundation
 struct Publish {
     var id: String
     var publisherUserId: String
-    var publisher: User?
+    var publisherUser: User?
+    var from: Address
+    var to: Address
     var totalNoOfSeets: Int
     var noOfSeetsAvailable: Int
     var costPerSeet: Float
     var dateTime: Date
-    var createdAt: Date
-    var updatedAt: Date
+    var createdAt: Date?
+    var updatedAt: Date?
     var bookings: [Booking]
 }

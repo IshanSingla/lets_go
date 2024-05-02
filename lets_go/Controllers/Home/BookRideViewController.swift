@@ -1,13 +1,13 @@
 //
-//  BookingViewController.swift
+//  BookRideViewController.swift
 //  lets_go
 //
-//  Created by Ishan Singla on 25/04/24.
+//  Created by Ishan Singla on 02/05/24.
 //
 
 import UIKit
 
-class BookingViewController: UITableViewController {
+class BookRideViewController: UITableViewController {
     
     var publish: Publish!
 
@@ -46,4 +46,3 @@ class BookingViewController: UITableViewController {
     */
 
 }
-
