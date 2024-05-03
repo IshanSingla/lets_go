@@ -25,7 +25,7 @@ class MyRideTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        UserAvtar.image = UIImage(systemName: "person.circle")
+        UserAvtar.image = UIImage(systemName: "person.crop.circle.fill")
         Seat1.image = UIImage(systemName: "carseat.right")
         Seat2.image = UIImage(systemName: "carseat.right")
         Seat3.image = UIImage(systemName: "carseat.right")

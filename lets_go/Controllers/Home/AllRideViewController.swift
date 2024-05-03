@@ -16,7 +16,7 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
             publisherUserId: "1",
             publisherUser: User(
                 id: "1",
-                name: "Ishan",
+                name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
@@ -55,7 +55,7 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
             publisherUserId: "1",
             publisherUser: User(
                 id: "1",
-                name: "Ishan",
+                name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
@@ -93,7 +93,7 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
             publisherUserId: "1",
             publisherUser: User(
                 id: "1",
-                name: "Ishan",
+                name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
