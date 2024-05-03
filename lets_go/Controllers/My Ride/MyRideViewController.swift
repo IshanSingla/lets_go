@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var data: [Publish] = [
@@ -149,7 +149,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let BookRideVC = segue.destination as! BookRideViewController
+//        let BookRideVC = segue.destination as! BookingByRideViewController
 //       BookRideVC.publish = data[(tableView.indexPathForSelectedRow?.row)!]
 //
 //    }

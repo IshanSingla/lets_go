@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     var data: [Publish] = [
@@ -140,6 +140,7 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.Seat1.image = publish.noOfSeetsAvailable < 1 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat2.image = publish.noOfSeetsAvailable < 2 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat3.image = publish.noOfSeetsAvailable < 3 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
+        cell.Seat4.image = publish.noOfSeetsAvailable < 4 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         
 //
         return cell
@@ -149,11 +150,11 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.performSegue(withIdentifier: "BookRideSegue", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let BookRideVC = segue.destination as! BookRideViewController
-//       BookRideVC.publish = data[(tableView.indexPathForSelectedRow?.row)!]
-//        
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let BookRideVC = segue.destination as! BookRideViewController
+       BookRideVC.publish = data[(tableView.indexPathForSelectedRow?.row)!]
+
+    }
 
 
 }

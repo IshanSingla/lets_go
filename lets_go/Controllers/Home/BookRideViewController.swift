@@ -13,6 +13,7 @@ class BookRideViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(publish.id)
 
         // Do any additional setup after loading the view.
     }

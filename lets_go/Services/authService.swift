@@ -10,93 +10,88 @@ import Foundation
 enum AuthServiceError: Error {
     case otpVerificationFailed
     case userNotFound
+    case otpExpired
+    case otpMismatch
+    case emailVerificationFailed
 }
 
 class AuthService {
-    var users:[User]=[
-        User(id: "2110990648",
-                         email: "ishan0648.be21@chitkara.edu.in",
-                         rollnumber: "2110990648",
-                         department: "Computer Science",
-                         address: "123 Main St, City",
-                         vehicleDetails: "Toyota Camry",
-                         collegeId: "1234",
-                         college: nil,
-                         createdAt: Date(),
-                         updatedAt: Date()),
-        User(id: "2110991129",
-                         email: "rajit1129.be21@chitkara.edu.in",
-                         rollnumber: "2110991129",
-                         department: "Computer Science",
-                         address: "123 Main St, City",
-                         vehicleDetails: "Toyota Camry",
-                         collegeId: "1234",
-                         college: nil,
-                         createdAt: Date(),
-             updatedAt: Date()),
-        User(id: "2110990749",
-                         email: "kaushiv0749.be21@chitkara.edu.in",
-                         rollnumber: "2110990749",
-                         department: "Computer Science",
-                         address: "123 Main St, City",
-                         vehicleDetails: "Toyota Camry",
-                         collegeId: "1234",
-                         college: nil,
-                         createdAt: Date(),
-             updatedAt: Date()),
-        
-        User(id: "2110991065",
-                         email: "prince1065.be21@chitkara.edu.in",
-                         rollnumber: "2110991065",
-                         department: "Computer Science",
-                         address: "123 Main St, City",
-                         vehicleDetails: "Toyota Camry",
-                         collegeId: "1234",
-                         college: nil,
-                         createdAt: Date(),
-                         updatedAt: Date())
-    ]
+    var userRepository: UserRepository!
+    var users:[User]=[]
+    
+    var userOtpRepository: UserOtpRepository!
+    var userOtps: [UserOtp]=[]
+    
+    var collegeRepository: CollegeRepository!
+    var colleges: [College]=[]
+    
+    init() {
+        userRepository = UserRepository()
+        userOtpRepository = UserOtpRepository()
+        collegeRepository = CollegeRepository()
+        load()
+    }
+    
+    private func load () {
+        users = userRepository.findAll()
+        userOtps = userOtpRepository.findAll()
+        colleges = collegeRepository.findAll()
+    }
     
     
-    var userOtps: [UserOtp]=[
-        
-        UserOtp(email: "ishan0648.be21@chitkara.edu.in",
-                                    otp: "123456",
-                                    expiry: Date().addingTimeInterval(600),
-                                    createdAt: Date(),
-                                    updatedAt: Date()),
-        UserOtp(email: "rajit1129.be21@chitkara.edu.in",
-                                    otp: "123456",
-                                    expiry: Date().addingTimeInterval(600),
-                                    createdAt: Date(),
-                                    updatedAt: Date()),
-        UserOtp(email: "prince1065.be21@chitkara.edu.in",
-                                    otp: "123456",
-                                    expiry: Date().addingTimeInterval(600),
-                                    createdAt: Date(),
-                                    updatedAt: Date()),
-        UserOtp(email: "kaushiv0749.be21@chitkara.edu.in",
-                                    otp: "123456",
-                                    expiry: Date().addingTimeInterval(600),
-                                    createdAt: Date(),
-                                    updatedAt: Date()),
-                            
-    ]
-    func sendOtp(_ email: String)throws -> Bool {
-        guard let userOtp = userOtps.first(where: { $0.email == email }) else {
+    func isEmailInCollegeDomain(email: String) throws -> Bool {
+        do {
+            for college in colleges {
+                let domainRegexPattern = "^.*@(\\Q\(college.domain)\\E)$"
+                guard let regex = try? NSRegularExpression(pattern: domainRegexPattern, options: []) else {
+                    continue // Skip to the next college if there's an issue with regex
+                }
+                if regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.utf16.count)) != nil {
+                    return true // Return true if there's a match
+                }
+            }
+            return false // Return false if no match is found
+        } catch {
+            throw AuthServiceError.emailVerificationFailed
+        }
+    }
+    
+    func sendOtp(_ email: String) throws -> Bool {
+        do {
+            let otp = "123456" // Generate a random 6-digit OTP
+            // sendOTP(email, otp) // Send the OTP to the user via email
+            
+            if var userOtp = userOtps.first(where: { $0.email == email }) {
+                userOtp.otp = otp
+                userOtp.expiry = Date().addingTimeInterval(60 * 5) // OTP expires in 5 minutes
+                userOtpRepository.update(userOtp: userOtp)
+                load() // Reload data after updating the OTP
+                return true
+            } else {
+                userOtpRepository.create(userOtp: UserOtp(
+                    email: email,
+                    otp: otp,
+                    expiry: Date().addingTimeInterval(60 * 5) // OTP expires in 5 minutes
+                ))
+                load() // Reload data after creating the OTP
+                return true
+            }
+        } catch {
             throw AuthServiceError.otpVerificationFailed
         }
-        return true
-        
     }
     
     func verifyOtp(_ email: String, otp: String) throws -> User {
             guard let userOtp = userOtps.first(where: { $0.email == email }) else {
-                throw AuthServiceError.otpVerificationFailed
+                throw AuthServiceError.otpMismatch
+            }
+        
+            guard userOtp.expiry > Date() else {
+                throw AuthServiceError.otpExpired
             }
 
             guard userOtp.otp == otp else {
-                throw AuthServiceError.otpVerificationFailed
+                throw AuthServiceError.otpMismatch
             }
 
             guard let user = users.first(where: { $0.email == email }) else {
@@ -106,13 +101,11 @@ class AuthService {
             return user
     }
     
-    func getUser (_ email:String)throws -> User{
-        guard let user = users.first(where: { $0.email == email }) else {
+    func getUser (_ id:String)throws -> User{
+        guard let user = users.first(where: { $0.id == id }) else {
             throw AuthServiceError.userNotFound
         }
         return user
-        
-        
     }
     
     

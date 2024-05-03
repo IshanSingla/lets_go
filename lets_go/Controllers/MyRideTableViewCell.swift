@@ -21,14 +21,15 @@ class MyRideTableViewCell: UITableViewCell {
     @IBOutlet weak var Seat3: UIImageView!
     @IBOutlet weak var Seat2: UIImageView!
     @IBOutlet weak var Seat1: UIImageView!
-        
-        
+    @IBOutlet weak var Seat4: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         UserAvtar.image = UIImage(systemName: "person.circle")
         Seat1.image = UIImage(systemName: "carseat.right")
         Seat2.image = UIImage(systemName: "carseat.right")
         Seat3.image = UIImage(systemName: "carseat.right")
+        Seat4.image = UIImage(systemName: "carseat.right")
         
         
         // Initialization code
