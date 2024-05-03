@@ -96,7 +96,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ChatTableViewCell
         cell.username.text = chat.userId2
-        cell.dateTime.text = chat.createdAt?.description
+        cell.dateTime.text = chat.createdAt.description
 //
         return cell
     }

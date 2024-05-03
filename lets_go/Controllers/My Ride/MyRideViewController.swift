@@ -22,9 +22,12 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 department: "",
                 collegeId: ""
             ),
+            fromId: "1",
+            toId: "1",
                 
             from: Address(
                 id: "1",
+                userId: "1",
                 address: "Chitkara University",
                 city: "Rajpura",
                 state: "Punjab",
@@ -33,6 +36,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
             ),
             to: Address(
                 id: "1",
+                userId: "1",
                 address: "118/2 Rajpura",
                 city: "Rajpura",
                 state: "Punjab",
@@ -57,9 +61,12 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 department: "",
                 collegeId: ""
             ),
+            fromId: "1",
+            toId: "1",
                 
             from: Address(
                 id: "1",
+                userId: "1",
                 address: "Chitkara University",
                 city: "Rajpura",
                 state: "Punjab",
@@ -68,6 +75,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
             ),
             to: Address(
                 id: "1",
+                userId: "1",
                 address: "118/2 Rajpura",
                 city: "Rajpura",
                 state: "Punjab",
@@ -91,8 +99,11 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 department: "",
                 collegeId: ""
             ),
+            fromId: "1",
+            toId: "1",
             from: Address(
                 id: "1",
+                userId: "1",
                 address: "Chitkara University",
                 city: "Rajpura",
                 state: "Punjab",
@@ -101,6 +112,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
             ),
             to: Address(
                 id: "1",
+                userId: "1",
                 address: "118/2 Rajpura",
                 city: "Rajpura",
                 state: "Punjab",
@@ -132,8 +144,8 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ridecell") as! MyRideTableViewCell
         
-        cell.FromLocation.text = publish.from.address
-        cell.ToLocation.text = publish.to.address
+        cell.FromLocation.text = publish.from!.address
+        cell.ToLocation.text = publish.to!.address
         cell.RideAmount.text = "Rs \(publish.costPerSeet)"
         cell.RideTime.text = publish.dateTime.description
         cell.UserName.text = publish.publisherUser!.name
