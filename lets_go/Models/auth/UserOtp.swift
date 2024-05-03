@@ -46,6 +46,10 @@ class UserOtpRepository {
         return userOtps.first(where: { $0.id == id })
     }
     
+    func findOne(byEmail email: String) -> UserOtp? {
+        return userOtps.first(where: { $0.email == email })
+    }
+    
     func create(userOtp: UserOtp) {
         userOtps.append(userOtp)
         saveUserOtps()
