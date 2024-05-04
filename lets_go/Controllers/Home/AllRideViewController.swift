@@ -10,11 +10,10 @@ import UIKit
 class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
 
     @IBOutlet weak var tableView: UITableView!
-    var data: [Publish] = [
-        Publish(
-            id: "1",
-            publisherUserId: "1",
-            publisherUser: User(
+    var data: [Rides] = [
+        Rides(
+            userId: "1",
+            user: User(
                 id: "1",
                 name: "Kaushiv",
                 email: "",
@@ -22,9 +21,16 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
                 department: "",
                 collegeId: ""
             ),
+            vehicleId: "1",
+            vehicle: Vehicle(
+                id: "1",
+                userId: "1",
+                vehicleName: "Honda City",
+                vehicleNumber: "PB08 1234",
+                vehicleType: "Car"
+            ),
             fromId: "1",
             toId: "1",
-                
             from: Address(
                 id: "1",
                 userId: "1",
@@ -50,16 +56,23 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
             dateTime: Date(),
             bookings: []
         ),
-        Publish(
-            id: "1",
-            publisherUserId: "1",
-            publisherUser: User(
+        Rides(
+            userId: "1",
+            user: User(
                 id: "1",
                 name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
                 collegeId: ""
+            ),
+            vehicleId: "1",
+            vehicle: Vehicle(
+                id: "1",
+                userId: "1",
+                vehicleName: "Honda City",
+                vehicleNumber: "PB08 1234",
+                vehicleType: "Car"
             ),
             fromId: "1",
             toId: "1",
@@ -88,16 +101,23 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
             dateTime: Date(),
             bookings: []
         ),
-        Publish(
-            id: "1",
-            publisherUserId: "1",
-            publisherUser: User(
+        Rides(
+            userId: "1",
+            user: User(
                 id: "1",
                 name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
                 collegeId: ""
+            ),
+            vehicleId: "1",
+            vehicle: Vehicle(
+                id: "1",
+                userId: "1",
+                vehicleName: "Honda City",
+                vehicleNumber: "PB08 1234",
+                vehicleType: "Car"
             ),
             fromId: "1",
             toId: "1",
@@ -139,22 +159,17 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let publish = data[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ridecell") as! MyRideTableViewCell
-        
         cell.FromLocation.text = publish.from!.address
         cell.ToLocation.text = publish.to!.address
         cell.RideAmount.text = "Rs \(publish.costPerSeet)"
         cell.RideTime.text = publish.dateTime.description
-        cell.UserName.text = publish.publisherUser!.name
+        cell.UserName.text = publish.user!.name
         cell.Seat1.image = publish.noOfSeetsAvailable < 1 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat2.image = publish.noOfSeetsAvailable < 2 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat3.image = publish.noOfSeetsAvailable < 3 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat4.image = publish.noOfSeetsAvailable < 4 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
-        
-//
         return cell
     }
     
@@ -164,8 +179,7 @@ class AllRideViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let BookRideVC = segue.destination as! BookRideViewController
-       BookRideVC.publish = data[(tableView.indexPathForSelectedRow?.row)!]
-
+       BookRideVC.ride = data[(tableView.indexPathForSelectedRow?.row)!]
     }
 
 

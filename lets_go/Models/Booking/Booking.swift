@@ -9,8 +9,8 @@ import Foundation
 
 struct Booking: Codable {
     var id: String = NSUUID().uuidString
-    var publishId: String
-    var publish: Publish?
+    var rideId: String
+    var ride: Rides?
     var userId: String
     var user: User?
     var approved: Bool

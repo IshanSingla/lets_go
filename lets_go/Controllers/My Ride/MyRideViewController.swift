@@ -10,21 +10,27 @@ import UIKit
 class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    var data: [Publish] = [
-        Publish(
-            id: "1",
-            publisherUserId: "1",
-            publisherUser: User(
+    var data: [Rides] = [
+        Rides(
+            userId: "1",
+            user: User(
                 id: "1",
-                name: "Ishan",
+                name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
                 collegeId: ""
             ),
+            vehicleId: "1",
+            vehicle: Vehicle(
+                id: "1",
+                userId: "1",
+                vehicleName: "Honda City",
+                vehicleNumber: "PB08 1234",
+                vehicleType: "Car"
+            ),
             fromId: "1",
             toId: "1",
-                
             from: Address(
                 id: "1",
                 userId: "1",
@@ -50,16 +56,23 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
             dateTime: Date(),
             bookings: []
         ),
-        Publish(
-            id: "1",
-            publisherUserId: "1",
-            publisherUser: User(
+        Rides(
+            userId: "1",
+            user: User(
                 id: "1",
-                name: "Ishan",
+                name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
                 collegeId: ""
+            ),
+            vehicleId: "1",
+            vehicle: Vehicle(
+                id: "1",
+                userId: "1",
+                vehicleName: "Honda City",
+                vehicleNumber: "PB08 1234",
+                vehicleType: "Car"
             ),
             fromId: "1",
             toId: "1",
@@ -88,16 +101,23 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
             dateTime: Date(),
             bookings: []
         ),
-        Publish(
-            id: "1",
-            publisherUserId: "1",
-            publisherUser: User(
+        Rides(
+            userId: "1",
+            user: User(
                 id: "1",
-                name: "Ishan",
+                name: "Kaushiv",
                 email: "",
                 rollnumber: "",
                 department: "",
                 collegeId: ""
+            ),
+            vehicleId: "1",
+            vehicle: Vehicle(
+                id: "1",
+                userId: "1",
+                vehicleName: "Honda City",
+                vehicleNumber: "PB08 1234",
+                vehicleType: "Car"
             ),
             fromId: "1",
             toId: "1",
@@ -148,7 +168,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.ToLocation.text = publish.to!.address
         cell.RideAmount.text = "Rs \(publish.costPerSeet)"
         cell.RideTime.text = publish.dateTime.description
-        cell.UserName.text = publish.publisherUser!.name
+        cell.UserName.text = publish.user!.name
         cell.Seat1.image = publish.noOfSeetsAvailable < 1 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat2.image = publish.noOfSeetsAvailable < 2 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")
         cell.Seat3.image = publish.noOfSeetsAvailable < 3 ? UIImage(systemName: "carseat.right"): UIImage(systemName: "carseat.right.fill")

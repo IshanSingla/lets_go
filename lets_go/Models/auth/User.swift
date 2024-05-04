@@ -15,7 +15,7 @@ struct User: Codable {
     var department: String
     var year: String?
     var addresses: [Address]?
-    var vehicleDetails: String?
+    var vehicles: [Vehicle]?
     var collegeId: String
     var college: College?
     var createdAt: Date = Date()
@@ -38,7 +38,6 @@ class UserRepository {
                     email: "ishan0648.be21@chitkara.edu.in",
                     rollnumber: "2110990648",
                     department: "Computer Science",
-                    vehicleDetails: "Toyota Camry",
                     collegeId: firstCollege.id,
                     createdAt: Date(),
                     updatedAt: Date()
@@ -50,7 +49,6 @@ class UserRepository {
                     email: "rajit1129.be21@chitkara.edu.in",
                     rollnumber: "2110991129",
                     department: "Computer Science",
-                    vehicleDetails: "Toyota Camry",
                     collegeId: firstCollege.id,
                     college: nil,
                     createdAt: Date(),
@@ -62,7 +60,6 @@ class UserRepository {
                     email: "kaushiv0749.be21@chitkara.edu.in",
                     rollnumber: "2110990749",
                     department: "Computer Science",
-                    vehicleDetails: "Toyota Camry",
                     collegeId: firstCollege.id,
                     college: nil,
                     createdAt: Date(),
@@ -74,7 +71,6 @@ class UserRepository {
                     email: "prince1065.be21@chitkara.edu.in",
                     rollnumber: "2110991065",
                     department: "Computer Science",
-                    vehicleDetails: "Toyota Camry",
                     collegeId: firstCollege.id,
                     college: nil,
                     createdAt: Date(),

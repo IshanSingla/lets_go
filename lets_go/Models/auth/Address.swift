@@ -50,6 +50,10 @@ class AddressRepository {
         return addresses.first(where: { $0.id == id })
     }
     
+    func findAll(byUserId userId: String) -> [Address] {
+        return addresses.filter({ $0.userId == userId })
+    }
+    
     func create(address: Address) {
         addresses.append(address)
         saveAddresses()

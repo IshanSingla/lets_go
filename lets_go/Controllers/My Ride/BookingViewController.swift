@@ -9,7 +9,7 @@ import UIKit
 
 class BookingByRideViewController: UITableViewController {
     
-    var publish: Publish!
+    var ride: Rides!
 
     override func viewDidLoad() {
         super.viewDidLoad()

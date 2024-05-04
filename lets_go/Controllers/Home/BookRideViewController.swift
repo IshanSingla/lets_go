@@ -9,11 +9,11 @@ import UIKit
 
 class BookRideViewController: UITableViewController {
     
-    var publish: Publish!
+    var ride: Rides!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(publish.id)
+        print(ride.id)
 
         // Do any additional setup after loading the view.
     }
