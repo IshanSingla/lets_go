@@ -32,6 +32,10 @@
 		AF37698B2BE6556A00527997 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37698A2BE6556A00527997 /* Vehicle.swift */; };
 		AF37698D2BE6560C00527997 /* Rides.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37698C2BE6560C00527997 /* Rides.swift */; };
 		AF37698F2BE6578E00527997 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37698E2BE6578E00527997 /* Booking.swift */; };
+		AF3769952BE7FB5500527997 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3769942BE7FB5500527997 /* UiView.swift */; };
+		AF3769982BE7FC5A00527997 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3769972BE7FC5A00527997 /* OnboardingSlide.swift */; };
+		AF37699D2BE7FF7800527997 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37699C2BE7FF7800527997 /* OnboardingCollectionViewCell.swift */; };
+		AF3769A92BE87CA500527997 /* AuthorisedApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3769A82BE87CA500527997 /* AuthorisedApp.storyboard */; };
 		AF8F29652BE1FB11003A5256 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F29642BE1FB11003A5256 /* ChatTableViewCell.swift */; };
 		AF8F29672BE20912003A5256 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F29662BE20912003A5256 /* ConversationTableViewCell.swift */; };
 		AF8F296D2BE24593003A5256 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F296C2BE24593003A5256 /* ProfileViewController.swift */; };
@@ -98,6 +102,10 @@
 		AF37698A2BE6556A00527997 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		AF37698C2BE6560C00527997 /* Rides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rides.swift; sourceTree = "<group>"; };
 		AF37698E2BE6578E00527997 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		AF3769942BE7FB5500527997 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
+		AF3769972BE7FC5A00527997 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		AF37699C2BE7FF7800527997 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF3769A72BE87CA500527997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AuthorisedApp.storyboard; sourceTree = "<group>"; };
 		AF8F29642BE1FB11003A5256 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		AF8F29662BE20912003A5256 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		AF8F296C2BE24593003A5256 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +153,6 @@
 		AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */,
 				AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */,
 				3FC48F932BE210B80032CB47 /* LoginViewController.swift */,
 				3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */,
@@ -215,6 +222,7 @@
 		AF2C98042BDA9F2F009DD59D /* lets_go */ = {
 			isa = PBXGroup;
 			children = (
+				AF3769932BE7FB2A00527997 /* Extension */,
 				AF2C98462BDAA15C009DD59D /* Resources */,
 				AF2C98472BDAA18B009DD59D /* Models */,
 				AF2C98442BDAA0BA009DD59D /* Views */,
@@ -246,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB480942BE39BD100E9EEEA /* MyRideTableViewCell.swift */,
+				AF3769922BE7F5CA00527997 /* Onboarding */,
 				AFB480982BE3B72D00E9EEEA /* Kaushiv */,
 				AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */,
 				AF0335262BDAD90600F0C796 /* Home */,
@@ -270,6 +279,7 @@
 			children = (
 				AF2C980B2BDA9F2F009DD59D /* Main.storyboard */,
 				AF2C98102BDA9F31009DD59D /* LaunchScreen.storyboard */,
+				AF3769A82BE87CA500527997 /* AuthorisedApp.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -286,6 +296,7 @@
 		AF2C98472BDAA18B009DD59D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF3769962BE7FC4600527997 /* Onboarding */,
 				AFAB255D2BE1008F002E756E /* Booking */,
 				AFAB254F2BE0F9DB002E756E /* auth */,
 				AFAB25562BE0FCBD002E756E /* Chat */,
@@ -303,6 +314,31 @@
 				AF9ACA0A2BE5718F00C267AA /* UserService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AF3769922BE7F5CA00527997 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */,
+				AF37699C2BE7FF7800527997 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		AF3769932BE7FB2A00527997 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AF3769942BE7FB5500527997 /* UiView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AF3769962BE7FC4600527997 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AF3769972BE7FC5A00527997 /* OnboardingSlide.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		AFAB254F2BE0F9DB002E756E /* auth */ = {
@@ -414,6 +450,7 @@
 				TargetAttributes = {
 					AF2C98012BDA9F2F009DD59D = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					AF2C98172BDA9F31009DD59D = {
 						CreatedOnToolsVersion = 15.3;
@@ -453,6 +490,7 @@
 				AF2C980F2BDA9F31009DD59D /* Assets.xcassets in Resources */,
 				AF2C98122BDA9F31009DD59D /* Base in Resources */,
 				AF2C980D2BDA9F2F009DD59D /* Base in Resources */,
+				AF3769A92BE87CA500527997 /* AuthorisedApp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,13 +532,16 @@
 				AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */,
 				AFB480A62BE3E4A400E9EEEA /* BookRideViewController.swift in Sources */,
 				3FC48F962BE23B020032CB47 /* completeInfoViewController.swift in Sources */,
+				AF3769982BE7FC5A00527997 /* OnboardingSlide.swift in Sources */,
 				AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */,
 				AFAB25552BE0FA52002E756E /* UserOtp.swift in Sources */,
+				AF3769952BE7FB5500527997 /* UiView.swift in Sources */,
 				AFB480952BE39BD100E9EEEA /* MyRideTableViewCell.swift in Sources */,
 				AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */,
 				AF2C98392BDAA00B009DD59D /* OnBoardingViewController.swift in Sources */,
 				AFB4809E2BE3B77100E9EEEA /* PostTableViewController.swift in Sources */,
 				AF9ACA0B2BE5718F00C267AA /* UserService.swift in Sources */,
+				AF37699D2BE7FF7800527997 /* OnboardingCollectionViewCell.swift in Sources */,
 				AF2C98542BDAA24A009DD59D /* chatService.swift in Sources */,
 				AFAB255A2BE0FCED002E756E /* Message.swift in Sources */,
 				AFAB25582BE0FCD1002E756E /* Chat.swift in Sources */,
@@ -563,6 +604,14 @@
 				AF2C98112BDA9F31009DD59D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AF3769A82BE87CA500527997 /* AuthorisedApp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF3769A72BE87CA500527997 /* Base */,
+			);
+			name = AuthorisedApp.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -692,6 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -711,6 +761,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chitkara.lets-go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -721,6 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

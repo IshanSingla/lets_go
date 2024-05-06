@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Bn-yb-Dw5"; */
+"7Bn-yb-Dw5.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Q23-F7-uM9"; */
+"Q23-F7-uM9.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "Login (Enter Otp)"; ObjectID = "aCE-0N-6FE"; */
+"aCE-0N-6FE.title" = "Login (Enter Otp)";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "bYk-vQ-Ru6"; */
+"bYk-vQ-Ru6.text" = "Email";
+
+/* Class = "UITextField"; placeholder = "example@chitkara.edu.in"; ObjectID = "gQT-oK-5na"; */
+"gQT-oK-5na.placeholder" = "example@chitkara.edu.in";
+
+/* Class = "UILabel"; text = "Otp"; ObjectID = "mnb-bY-d0p"; */
+"mnb-bY-d0p.text" = "Otp";
+
+/* Class = "UITextField"; placeholder = "345622"; ObjectID = "oKB-AV-Xft"; */
+"oKB-AV-Xft.placeholder" = "345622";
