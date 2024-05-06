@@ -28,7 +28,7 @@ class AuthService {
         addressRepository = AddressRepository()
     }
     
-    func sendOtp(_ email: String) throws -> Bool {
+    func sendOtp(_ email: String) throws -> String {
         do {
             let otp = "123456" // Generate a random 6-digit OTP
             // sendOTP(email, otp) // Send the OTP to the user via email
@@ -38,32 +38,33 @@ class AuthService {
                 userOtp!.otp = otp
                 userOtp!.expiry = Date().addingTimeInterval(60 * 5) // OTP expires in 5 minutes
                 userOtpRepository.update(userOtp: userOtp!)
-                return true
+                return userOtp!.id
             } else {
-                userOtpRepository.create(userOtp: UserOtp(
+                var userOtp = UserOtp(
                     email: email,
                     otp: otp,
                     expiry: Date().addingTimeInterval(60 * 5) // OTP expires in 5 minutes
-                ))
-                return true
+                )
+                userOtpRepository.create(userOtp: userOtp)
+                return userOtp.id
             }
         } catch {
             throw AuthServiceError.otpVerificationFailed
         }
     }
     
-    func verifyOtp(_ email: String, otp: String) throws -> User {
-        var userOtp = userOtpRepository.findOne(byEmail: email)
+    func verifyOtp(byId id: String, otp: String) throws -> User {
+        var userOtp = userOtpRepository.findOne(byId: id)
         
         if userOtp != nil {
             if userOtp!.expiry < Date() {
                 throw AuthServiceError.otpExpired
             }
             if userOtp!.otp == otp {
-                let user = userRepository.findOne(byEmail: email)!
+                let user: User? = userRepository.findOne(byEmail: userOtp!.email ?? "")
                 if user != nil {
-                    UserDefaults.standard.set(user.id, forKey: "userId")
-                    return user
+                    UserDefaults.standard.set(user!.id, forKey: "userId")
+                    return user!
                 }else {
                     throw AuthServiceError.userNotFound
                 }

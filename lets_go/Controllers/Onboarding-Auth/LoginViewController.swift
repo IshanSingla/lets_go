@@ -8,118 +8,100 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    var isShowing = false
+    
+//    services
+    private var authService: AuthService = AuthService()
+    private var userService: UserService = UserService()
+    private var userotpId: String!
+    
+//    outlets
     @IBOutlet weak var confirmEmail: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var otpTextField: UITextField!
     
-    @IBOutlet weak var otpButton: UIButton!
+    @IBOutlet weak var otpTextField: UITextField!
     @IBOutlet weak var otpLabel: UILabel!
+    @IBOutlet weak var otpButton: UIButton!
+    
+    var isShowing = false {
+        didSet{
+            if isShowing {
+                otpLabel.isHidden = false
+                otpTextField.isHidden = false
+                otpButton.isHidden = false
+                confirmEmail.isHidden=true
+            } else {
+                otpLabel.isHidden = true
+                otpTextField.isHidden = true
+                otpButton.isHidden = true
+                confirmEmail.isHidden = false
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
-        otpLabel.isHidden = true
-        otpTextField.isHidden = true
-        otpButton.isHidden = true
-        
-        // Do any additional setup after loading the view.
+        isShowing = false
     }
     
     
-    @IBAction func confirmEmailTapped(_ sender: Any) {
+    @IBAction func confirmEmail(_ sender: Any) {
         
         
         guard let email = emailTextField.text, !email.isEmpty else {
             showAlert(message: "Please enter your college Email.")
             return
         }
-        if !isValidEmail(email) {
-            showAlert(message: "Invalid email domain. Please use a chitkara.edu.in email.")
+        do {
+            try userService.verifyEmailWithCollegeDomain(email: email)
+            isShowing = true
+            userotpId = try authService.sendOtp(email)
+            showAlert(message: "OTP sent to your email.")
+        } catch {
+            isShowing = false
+            showAlert(message: "Please enter a valid college Email.")
             return
         }
-//        emailTextField
-//        confirmEmail.
-        
-        otpLabel.isHidden = false
-        otpTextField.isHidden = false
-        otpButton.isHidden = false
         return
     }
     
     
-    @IBAction func signupButtonTapped(_ sender: Any) {
-        guard let email = emailTextField.text, !email.isEmpty,
-              let otp = otpTextField.text, !otp.isEmpty else {
-            
+    @IBAction func confirmOtp(_ sender: Any) {
+        guard let otp = otpTextField.text, !otp.isEmpty else {
             showAlert(message: "Please enter Otp OTP.")
             return
-    }
-        if isValidEmail(email) {
-            
-            if otp == "123456" {
-              
-                showAlert(message: "Signup successful!")
-                // Proceed with the segue if both email and OTP are valid
-                performSegue(withIdentifier: "completeInfoIdentifier", sender: nil)
-            } else {
-                
-                showAlert(message: "Invalid OTP. Please try again.")
-            }
-        } else {
-            
-            showAlert(message: "Invalid email domain. Please use a chitkara.edu.in email.")
         }
+        do {
+            let user = try authService.verifyOtp(byId: userotpId, otp: otp)
+            print(user)
+//            performSegue(withIdentifier: "completeInfoIdentifier", sender: user)
+        } catch {
+            if let error = error as? AuthServiceError {
+                switch error {
+                case .userNotFound:
+                    showAlert(message: "User not found.")
+                    return
+                case .otpMismatch:
+                    showAlert(message: "Invalid OTP.")
+                    return
+                case .otpExpired:
+                    showAlert(message: "OTP has expired.")
+                    return
+                default:
+                    showAlert(message: "OTP verification failed.")
+                    return
+                }
+            }
+            showAlert(message: "Invalid OTP.")
+            return
+        }
+        
+        
     }
-    
-   
-    func isValidEmail(_ email: String) -> Bool {
-        let domain = email.components(separatedBy: "@").last ?? ""
-        return domain.lowercased() == "chitkara.edu.in"
-    }
-    
     
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Signup", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
-    }
-    
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        if identifier == "completeInfoIdentifier" {
-            
-            return isValidSignup()
-        }
-        
-        return true
-    }
-    
-    func isValidSignup() -> Bool {
-        guard let email = emailTextField.text, !email.isEmpty,
-              let otp = otpTextField.text, !otp.isEmpty else {
-            
-            showAlert(message: "Please enter both email and OTP.")
-            return false
-        }
-        
-       
-        if !isValidEmail(email) {
-            
-            showAlert(message: "Invalid email domain. Please use a chitkara.edu.in email.")
-            return false
-        }
-        
-      
-        if otp != "123456" {
-            
-            showAlert(message: "Invalid OTP. Please try again.")
-            return false
-        }
-        
-        
-        return true
     }
     
  

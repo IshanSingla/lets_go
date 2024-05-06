@@ -18,6 +18,8 @@ class OnBoardingsViewController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBAction func TempLogin(_ sender: Any) {
         print("Temp Login")
+        UserDefaults.standard.set("id", forKey: "userId")
+        print(UserDefaults.standard.value(forKey: "userId")!)
         let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AuthorisedApp") as! UITabBarController
         vc.modalPresentationStyle = .fullScreen
