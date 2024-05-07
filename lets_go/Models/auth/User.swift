@@ -37,7 +37,7 @@ class UserRepository {
                     name: "Ishan Singla",
                     email: "ishan0648.be21@chitkara.edu.in",
                     rollnumber: "2110990648",
-                    department: "Computer Science",
+                    department: "BE CSE",
                     collegeId: firstCollege.id,
                     createdAt: Date(),
                     updatedAt: Date()
@@ -48,7 +48,7 @@ class UserRepository {
                     name: "Rajit",
                     email: "rajit1129.be21@chitkara.edu.in",
                     rollnumber: "2110991129",
-                    department: "Computer Science",
+                    department: "BE CSE",
                     collegeId: firstCollege.id,
                     college: nil,
                     createdAt: Date(),
@@ -59,7 +59,7 @@ class UserRepository {
                     name: "Kaushiv",
                     email: "kaushiv0749.be21@chitkara.edu.in",
                     rollnumber: "2110990749",
-                    department: "Computer Science",
+                    department: "BE CSE",
                     collegeId: firstCollege.id,
                     college: nil,
                     createdAt: Date(),
@@ -70,7 +70,7 @@ class UserRepository {
                     name: "Prince",
                     email: "prince1065.be21@chitkara.edu.in",
                     rollnumber: "2110991065",
-                    department: "Computer Science",
+                    department: "BE CSE",
                     collegeId: firstCollege.id,
                     college: nil,
                     createdAt: Date(),
@@ -121,5 +121,10 @@ class UserRepository {
     func delete(byId id: String) {
         users.removeAll(where: { $0.id == id })
         saveUsers()
+    }
+    
+    func getDevelopers() -> [User] {
+//        slice firt 3
+        return Array(users.prefix(3))
     }
 }
