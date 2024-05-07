@@ -15,16 +15,6 @@ class OnBoardingsViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBAction func skipButtonAction(_ sender: Any) {
         navigateLogin()
     }
-    
-    @IBAction func TempLogin(_ sender: Any) {
-//        UserDefaults.standard.set("id", forKey: "userId")
-//        print(UserDefaults.standard.value(forKey: "userId")!)
-        let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "AuthorisedApp") as! UITabBarController
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .flipHorizontal
-        present(vc, animated: true, completion: nil)
-    }
     @IBOutlet weak var collection: UICollectionView!
     var currentPage = 0 {
         didSet {
