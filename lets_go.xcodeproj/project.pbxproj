@@ -8,20 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48F932BE210B80032CB47 /* LoginViewController.swift */; };
-		3FC48F962BE23B020032CB47 /* completeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */; };
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
 		AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */; };
 		AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0335212BDAB8F500F0C796 /* PublishViewController.swift */; };
 		AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */; };
 		AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98052BDA9F2F009DD59D /* AppDelegate.swift */; };
-		AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98072BDA9F2F009DD59D /* SceneDelegate.swift */; };
 		AF2C980D2BDA9F2F009DD59D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AF2C980C2BDA9F2F009DD59D /* Base */; };
 		AF2C980F2BDA9F31009DD59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2C980E2BDA9F31009DD59D /* Assets.xcassets */; };
 		AF2C98122BDA9F31009DD59D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AF2C98112BDA9F31009DD59D /* Base */; };
 		AF2C981D2BDA9F31009DD59D /* lets_goTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C981C2BDA9F31009DD59D /* lets_goTests.swift */; };
 		AF2C98272BDA9F31009DD59D /* lets_goUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98262BDA9F31009DD59D /* lets_goUITests.swift */; };
 		AF2C98292BDA9F31009DD59D /* lets_goUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98282BDA9F31009DD59D /* lets_goUITestsLaunchTests.swift */; };
-		AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */; };
 		AF2C98392BDAA00B009DD59D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */; };
 		AF2C98412BDAA053009DD59D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98402BDAA053009DD59D /* ConversationViewController.swift */; };
 		AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */; };
@@ -55,6 +52,7 @@
 		AFB611E52BE9CAC700B06404 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB611E42BE9CAC700B06404 /* InicialViewController.swift */; };
 		AFB611E72BE9CB4E00B06404 /* AuthApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB611E62BE9CB4E00B06404 /* AuthApp.storyboard */; };
 		AFB611E92BE9CEC500B06404 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB611E82BE9CEC500B06404 /* ProfileTableViewController.swift */; };
+		AFB611EB2BE9E27900B06404 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB611EA2BE9E27900B06404 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,14 +74,12 @@
 
 /* Begin PBXFileReference section */
 		3FC48F932BE210B80032CB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeInfoViewController.swift; sourceTree = "<group>"; };
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
 		AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		AF0335212BDAB8F500F0C796 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 		AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF2C98022BDA9F2F009DD59D /* lets_go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lets_go.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C98052BDA9F2F009DD59D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF2C98072BDA9F2F009DD59D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF2C980C2BDA9F2F009DD59D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF2C980E2BDA9F31009DD59D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF2C98112BDA9F31009DD59D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +89,6 @@
 		AF2C98222BDA9F31009DD59D /* lets_goUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lets_goUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C98262BDA9F31009DD59D /* lets_goUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lets_goUITests.swift; sourceTree = "<group>"; };
 		AF2C98282BDA9F31009DD59D /* lets_goUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lets_goUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		AF2C98402BDAA053009DD59D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +122,7 @@
 		AFB611E42BE9CAC700B06404 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		AFB611E62BE9CB4E00B06404 /* AuthApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthApp.storyboard; sourceTree = "<group>"; };
 		AFB611E82BE9CEC500B06404 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		AFB611EA2BE9E27900B06404 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,14 +150,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */ = {
+		AF0335252BDAD8CC00F0C796 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C98362BDA9FFB009DD59D /* AuthViewController.swift */,
 				3FC48F932BE210B80032CB47 /* LoginViewController.swift */,
-				3FC48F952BE23B020032CB47 /* completeInfoViewController.swift */,
+				AFB611EA2BE9E27900B06404 /* SignupViewController.swift */,
 			);
-			path = "Onboarding-Auth";
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		AF0335262BDAD90600F0C796 /* Home */ = {
@@ -261,7 +256,7 @@
 				AFB611E32BE9CAA500B06404 /* InicialLoader */,
 				AF3769922BE7F5CA00527997 /* Onboarding */,
 				AFB480982BE3B72D00E9EEEA /* Kaushiv */,
-				AF0335252BDAD8CC00F0C796 /* Onboarding-Auth */,
+				AF0335252BDAD8CC00F0C796 /* Auth */,
 				AF0335262BDAD90600F0C796 /* Home */,
 				AF0335272BDAD94400F0C796 /* My Ride */,
 				AF0335292BDAD98700F0C796 /* Profile */,
@@ -294,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				AF2C98052BDA9F2F009DD59D /* AppDelegate.swift */,
-				AF2C98072BDA9F2F009DD59D /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -537,18 +531,16 @@
 				3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
 				AFB611E92BE9CEC500B06404 /* ProfileTableViewController.swift in Sources */,
-				AF2C98372BDA9FFB009DD59D /* AuthViewController.swift in Sources */,
 				AFAB25532BE0FA2E002E756E /* College.swift in Sources */,
 				AF8F29652BE1FB11003A5256 /* ChatTableViewCell.swift in Sources */,
+				AFB611EB2BE9E27900B06404 /* SignupViewController.swift in Sources */,
 				AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */,
 				AF2C98562BDAA25B009DD59D /* authService.swift in Sources */,
 				AF37698D2BE6560C00527997 /* Rides.swift in Sources */,
 				AF37698F2BE6578E00527997 /* Booking.swift in Sources */,
 				AF0335222BDAB8F500F0C796 /* PublishViewController.swift in Sources */,
 				AFB480A62BE3E4A400E9EEEA /* BookRideViewController.swift in Sources */,
-				3FC48F962BE23B020032CB47 /* completeInfoViewController.swift in Sources */,
 				AF3769982BE7FC5A00527997 /* OnboardingSlide.swift in Sources */,
-				AF2C98082BDA9F2F009DD59D /* SceneDelegate.swift in Sources */,
 				AFAB25552BE0FA52002E756E /* UserOtp.swift in Sources */,
 				AF3769952BE7FB5500527997 /* UiView.swift in Sources */,
 				AFB480952BE39BD100E9EEEA /* MyRideTableViewCell.swift in Sources */,

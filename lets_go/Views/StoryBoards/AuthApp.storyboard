@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="15715" y="-3395"/>
         </scene>
-        <!--Login (Enter Otp)-->
+        <!--Login-->
         <scene sceneID="EdE-aV-ELe">
             <objects>
-                <viewController title="Login (Enter Otp)" id="fLX-Rl-Fjh" customClass="LoginViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="fLX-Rl-Fjh" customClass="LoginViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c1W-nb-Mna">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="emailbutton" title=""/>
                                                         <connections>
                                                             <action selector="confirmOtp:" destination="fLX-Rl-Fjh" eventType="touchUpInside" id="ogk-Zp-PRw"/>
+                                                            <segue destination="sTQ-OP-3dM" kind="show" identifier="SignupVC" id="JxD-nW-CL2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -147,28 +148,10 @@
             </objects>
             <point key="canvasLocation" x="16642" y="-3395"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Baz-u6-Rv7">
-            <objects>
-                <navigationController storyboardIdentifier="SignupApp" automaticallyAdjustsScrollViewInsets="NO" id="0RE-be-LLY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U48-Yb-qfr">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="sTQ-OP-3dM" kind="relationship" relationship="rootViewController" id="vnk-eL-NjO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L79-i7-k11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18104.580152671755" y="-3395.0704225352115"/>
-        </scene>
         <!--Signup (Fill Details)-->
         <scene sceneID="XD7-bA-Ka5">
             <objects>
-                <viewController title="Signup (Fill Details)" id="sTQ-OP-3dM" customClass="completeInfoViewController" sceneMemberID="viewController">
+                <viewController title="Signup (Fill Details)" id="sTQ-OP-3dM" customClass="SignupViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aDW-gk-0zO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,9 +262,6 @@
                                         <rect key="frame" x="1" y="520" width="324" height="45.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="completeProfile" title=""/>
-                                        <connections>
-                                            <action selector="submitButtonTapped:" destination="sTQ-OP-3dM" eventType="touchUpInside" id="NLd-yF-BbP"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -292,21 +272,12 @@
                             <constraint firstItem="Qrj-Zr-1qf" firstAttribute="centerX" secondItem="j6R-FR-WSL" secondAttribute="centerX" id="bsF-om-Mh1"/>
                             <constraint firstItem="Qrj-Zr-1qf" firstAttribute="centerY" secondItem="j6R-FR-WSL" secondAttribute="centerY" id="zBx-Zs-SMZ"/>
                         </constraints>
-                        <connections>
-                            <outlet property="departmentTextField" destination="zgH-2N-1Qv" id="GBq-2g-svJ"/>
-                            <outlet property="mobileNumberTextField" destination="7wS-fp-XPa" id="7Eq-sw-opA"/>
-                            <outlet property="nameTextField" destination="ZiH-pg-mNz" id="yiQ-zz-emF"/>
-                            <outlet property="universityIDTextField" destination="hMC-9d-gp7" id="bWM-xR-OfQ"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6tI-lS-NRT"/>
-                    <connections>
-                        <outlet property="nameTextField" destination="ZiH-pg-mNz" id="GKg-Q4-t7u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBz-5S-xVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19031.297709923663" y="-3395.0704225352115"/>
+            <point key="canvasLocation" x="17534" y="-3395"/>
         </scene>
         <!--On Boardings View Controller-->
         <scene sceneID="ihv-Fx-XVh">
@@ -409,15 +380,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="FJj-mx-RS2">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xCg-E3-BfZ">
-                            <rect key="frame" x="159" y="5" width="75" height="34.333333333333336"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            <connections>
-                                <action selector="TempLogin:" destination="GQi-8D-qCa" eventType="touchUpInside" id="3Px-oq-NDg"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ZYJ-c5-4b0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kc4-w9-iXs">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
