@@ -71,13 +71,20 @@ class LoginViewController: UIViewController {
         }
         do {
             let user = try authService.verifyOtp(byId: userotpId, otp: otp)
-            print(user)
+            let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "AuthorisedApp") as! UITabBarController
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            present(vc, animated: true, completion: nil)
 //            performSegue(withIdentifier: "completeInfoIdentifier", sender: user)
         } catch {
             if let error = error as? AuthServiceError {
                 switch error {
                 case .userNotFound:
-                    showAlert(message: "User not found.")
+                    let vc = storyboard!.instantiateViewController(identifier: "SignupApp") as! UINavigationController
+                    vc.modalPresentationStyle = .fullScreen
+                    vc.modalTransitionStyle = .flipHorizontal
+                    present(vc, animated: true, completion: nil)
                     return
                 case .otpMismatch:
                     showAlert(message: "Invalid OTP.")

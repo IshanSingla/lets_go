@@ -17,9 +17,8 @@ class OnBoardingsViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     @IBAction func TempLogin(_ sender: Any) {
-        print("Temp Login")
-        UserDefaults.standard.set("id", forKey: "userId")
-        print(UserDefaults.standard.value(forKey: "userId")!)
+//        UserDefaults.standard.set("id", forKey: "userId")
+//        print(UserDefaults.standard.value(forKey: "userId")!)
         let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AuthorisedApp") as! UITabBarController
         vc.modalPresentationStyle = .fullScreen
@@ -61,6 +60,20 @@ class OnBoardingsViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        let authService: AuthService = AuthService()
+        do {
+            try authService.getCurrentUser()
+            let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "AuthorisedApp") as! UITabBarController
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            present(vc, animated: true, completion: nil)
+            
+        }
+        catch{
+            
+        }
+        
     }
 
     @IBAction func next(_ sender: Any) {

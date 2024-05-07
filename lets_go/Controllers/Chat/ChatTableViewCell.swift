@@ -15,7 +15,7 @@ class ChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        chatImage.image = UIImage(systemName: "person.circle")
+        chatImage.image = UIImage(systemName: "person.crop.circle.fill")
         // Initialization code
     }
 

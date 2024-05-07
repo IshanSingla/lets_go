@@ -97,5 +97,9 @@ class AuthService {
         return user!
     }
     
+    func logout() throws {
+        UserDefaults.standard.removeObject(forKey: "userId")
+    }
+    
     
 }

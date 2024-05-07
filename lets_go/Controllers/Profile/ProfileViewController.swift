@@ -7,10 +7,15 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UItableViewController {
+    private var authService: AuthService = AuthService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            try authService.getCurrentUser()
+        } catch {
+        }
 
         // Do any additional setup after loading the view.
     }

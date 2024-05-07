@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Inicial View Controller-->
+        <scene sceneID="Xe9-gR-wom">
+            <objects>
+                <viewController id="Ny8-rp-VGS" customClass="InicialViewController" customModule="lets_go" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndt-xu-Own" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12046" y="-3395"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="F5l-3h-Z86">
             <objects>
@@ -427,7 +435,7 @@
         <!--Navigation Controller-->
         <scene sceneID="soe-c1-dtb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UCG-Mw-Uus" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignupApp" automaticallyAdjustsScrollViewInsets="NO" id="UCG-Mw-Uus" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gLc-hP-EnR">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
