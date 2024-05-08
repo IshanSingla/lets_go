@@ -197,6 +197,7 @@
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-ex-Wr0">
                                                         <rect key="frame" x="17" y="190" width="300" height="34"/>
+                                                        <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="83I-wp-co2"/>
                                                             <constraint firstAttribute="height" constant="34" id="zFS-M1-i0L"/>
@@ -206,6 +207,7 @@
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nD-gV-UD8">
                                                         <rect key="frame" x="17" y="279" width="300" height="34"/>
+                                                        <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="O4c-u4-AYP"/>
                                                             <constraint firstAttribute="height" constant="34" id="qkr-DP-xUi"/>
@@ -363,6 +365,7 @@
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QrW-c0-TXi">
                                                                                 <rect key="frame" x="0.0" y="26" width="340" height="34"/>
+                                                                                <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="Lpx-Rt-mFL"/>
                                                                                     <constraint firstAttribute="width" constant="340" id="VaV-BT-FSj"/>
@@ -387,6 +390,7 @@
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vF-qV-2L9">
                                                                                 <rect key="frame" x="0.0" y="26" width="340" height="34"/>
+                                                                                <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="AEY-9Q-YKR"/>
                                                                                     <constraint firstAttribute="width" constant="340" id="BV0-sp-gTp"/>
@@ -411,10 +415,12 @@
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fk-WL-b4e">
                                                                                 <rect key="frame" x="0.0" y="26" width="340" height="34"/>
+                                                                                <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="340" id="mQF-Se-Q4N"/>
                                                                                     <constraint firstAttribute="height" constant="34" id="opS-6v-RQ4"/>
                                                                                 </constraints>
+                                                                                <color key="textColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
@@ -435,6 +441,7 @@
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zw-qh-73S">
                                                                                 <rect key="frame" x="0.0" y="26" width="340" height="34"/>
+                                                                                <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="kqI-bz-23T"/>
                                                                                     <constraint firstAttribute="width" constant="340" id="wDn-HU-8Ov"/>
@@ -459,6 +466,7 @@
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSy-WF-6YV">
                                                                                 <rect key="frame" x="0.0" y="26" width="340" height="34"/>
+                                                                                <color key="tintColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="340" id="1cB-JP-Bj0"/>
                                                                                     <constraint firstAttribute="height" constant="34" id="Tz4-Uw-cMZ"/>
@@ -472,7 +480,7 @@
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsu-SK-6aM">
                                                                 <rect key="frame" x="94.666666666666671" y="556" width="150.66666666666663" height="34.333333333333371"/>
-                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                <color key="backgroundColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Complete Profile">
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -539,16 +547,16 @@
         <image name="slide1" width="361" height="208.5"/>
         <image name="slide3" width="326" height="166"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
