@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.red
         window = UIWindow(frame: UIScreen.main.bounds)
                 do {
-                    try authService.getCurrentUser()
-                    print("User already logged in")
+                    let user = try authService.getCurrentUser()
+                    print("User already loggedIn as \(user.name)")
                     let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
                     
                     window?.rootViewController = storyboard.instantiateInitialViewController()
