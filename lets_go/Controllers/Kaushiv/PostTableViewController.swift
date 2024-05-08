@@ -7,157 +7,161 @@
 
 import UIKit
 
-class PostTableViewController: UITableViewController {
+class PostTableViewController: UITableViewController,  UIPickerViewDataSource, UIPickerViewDelegate  {
 
+
+ 
+    @IBOutlet weak var toPlacePickerView: UIPickerView!
+    @IBOutlet weak var fromPlacePickerView: UIPickerView!
+    @IBOutlet weak var toText: UITextField!
+    @IBOutlet weak var fromText: UITextField!
     @IBOutlet weak var seatNo: UILabel!
     @IBOutlet weak var seatCount: UIStepper!
+    
+    private var fromOptions: [String]!
+    private var toOptions: [String]!
+    
+    
+//    let fromTextIndexPath = IndexPath(row: 0, section: 0)
+//    let fromPlacePickerViewIndexPath = IndexPath(row: 1, section: 0)
+//    let toTextIndexPath = IndexPath(row: 2, section: 0)
+//    let toPlacePickerViewIndexPath = IndexPath(row: 3, section: 0)
+//
+//    var isfromPlacePickerViewVisible:Bool = false{
+//        didSet{
+//            fromPlacePickerView.isHidden = !isfromPlacePickerViewVisible
+//        }
+//        
+//    }
+//    var istoPlacePickerViewVisible:Bool = false{
+//        didSet{
+//            toPlacePickerView.isHidden = !istoPlacePickerViewVisible
+//        }
+//        
+//    }
+    
+    
+    
+//
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath{
+//        case fromPlacePickerViewIndexPath where isfromPlacePickerViewVisible == false : return 0
+//        case toPlacePickerViewIndexPath where istoPlacePickerViewVisible == false : return 0
+//        default: return UITableView.automaticDimension
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath{
+//        case fromPlacePickerViewIndexPath: return 190
+//        case toPlacePickerViewIndexPath: return 190
+//        default: return UITableView.automaticDimension
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        if(indexPath == fromTextIndexPath && istoPlacePickerViewVisible == false){
+//            isfromPlacePickerViewVisible.toggle()
+//        }
+//        else if(indexPath == toTextIndexPath && isfromPlacePickerViewVisible == false){
+//            istoPlacePickerViewVisible.toggle()
+//        }
+//        else if(indexPath == fromTextIndexPath || indexPath == toTextIndexPath){
+//            isfromPlacePickerViewVisible.toggle()
+//            istoPlacePickerViewVisible.toggle()
+//        }
+//        else{return}
+//        tableView.beginUpdates()
+//        tableView.endUpdates()
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        seatCount.maximumValue = 3
+        seatCount.maximumValue = 4
+        
+        fromOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+        toOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+        fromPlacePickerView.dataSource = self
+        fromPlacePickerView.delegate = self
+        toPlacePickerView.dataSource = self
+        toPlacePickerView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        fromText.inputView = fromPlacePickerView
+        toText.inputView = toPlacePickerView
     }
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        seatCount.maximumValue = 3
+//        
+//        let fromOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+//           let toOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+//           fromPlacePickerView.dataSource = self
+//           fromPlacePickerView.delegate = self
+//           toPlacePickerView.dataSource = self
+//           toPlacePickerView.delegate = self
+//
+//        // Uncomment the following line to preserve selection between presentations
+//        // self.clearsSelectionOnViewWillAppear = false
+//
+//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//    }
+    
+    
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 5
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        if section == 0{
-            return 2
-        }
-        else if section == 1{
-            return 1
-        }
-        else if section == 2{
-            return 1
-        }else if section == 3{
-            return 1
-        }else if section == 4{
-            return 1
-        }
-        return 0
-    }
    
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black
-        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        header.textLabel?.frame = CGRect(x: 5, y: 0, width: 300, height: 20)
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+        header.textLabel?.frame = CGRect(x: 12, y: 0, width: 300, height: 20)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
     
     func updateCount(){
         seatNo.text = "\(Int(seatCount.value))"
     }
-    
     @IBAction func StepperChange(_ sender: UIStepper) {
         updateCount()
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let  headerView = UIView()
-//        let label = UILabel()
-//        /*label.font = UIFont.boldSystemFont(ofSize: 18)
-//        label.textColor = UIColor.black
-//        headerView.addSubview(label)*/
-//
-//        /*if section != 4 {
-//            label.text = "Header\(section + 1)"
-//        }else{
-//            label.text = ""
-//        }*/
-//        if section == 0{
-//            label.text = "Where are you going:"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }
-//        else if section == 1{
-//            label.text = "When?"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }
-//        else if section == 2{
-//            label.text = "Seats Available?"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }else if section == 3{
-//            label.text = "Offer Price:"
-//            label.font = UIFont.boldSystemFont(ofSize: 20)
-//            label.textColor = UIColor.black
-//            headerView.addSubview(label)
-//        }else if section == 4{
-//            label.text = ""
-//        }
-//        return headerView
-//    }
-       
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == fromPlacePickerView {
+            return fromOptions.count
+        } else {
+            return toOptions.count
         }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == fromPlacePickerView {
+            return fromOptions[row]
+        } else {
+            return toOptions[row]
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == fromPlacePickerView {
+            // Code to handle the selection of an item
+        } else {
+            // Code to handle the selection of an item
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
