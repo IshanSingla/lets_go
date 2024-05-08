@@ -420,7 +420,6 @@
                                                                                     <constraint firstAttribute="width" constant="340" id="mQF-Se-Q4N"/>
                                                                                     <constraint firstAttribute="height" constant="34" id="opS-6v-RQ4"/>
                                                                                 </constraints>
-                                                                                <color key="textColor" red="1" green="0.38823529410000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
