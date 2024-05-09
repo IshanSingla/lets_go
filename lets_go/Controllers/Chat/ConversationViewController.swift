@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     var chat: Chat!
     private var data: [Message]=[]
@@ -16,6 +16,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         
@@ -37,8 +38,37 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
                 // Set up tap gesture recognizer to dismiss keyboard
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
                 view.addGestureRecognizer(tapGesture)
+        
+        textField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+           // Move the text field upwards when the keyboard appears
+           animateViewMoving(up: true, moveValue: 250)
+       }
+       
+       func textFieldDidEndEditing(_ textField: UITextField) {
+           // Restore the original position when the keyboard disappears
+           animateViewMoving(up: false, moveValue: 250)
+       }
+       
+       func animateViewMoving(up: Bool, moveValue: CGFloat) {
+           let movementDuration: TimeInterval = 0.3
+           let movement: CGFloat = (up ? -moveValue : moveValue)
+           
+           UIView.beginAnimations("animateView", context: nil)
+           UIView.setAnimationBeginsFromCurrentState(true)
+           UIView.setAnimationDuration(movementDuration)
+           self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+           UIView.commitAnimations()
+       }
+       
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+           return true
+       }
     
     @objc func keyboardWillShow(notification: Notification) {
             guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
