@@ -10,6 +10,7 @@ import UIKit
 class FindTableViewController: UITableViewController {
 
   
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var seatNo: UILabel!
     @IBOutlet weak var seatCount: UIStepper!
     override func viewDidLoad() {
@@ -17,6 +18,8 @@ class FindTableViewController: UITableViewController {
         seatCount.maximumValue = 4
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        datePicker.minimumDate = Date()
     }
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -31,6 +34,9 @@ class FindTableViewController: UITableViewController {
     }
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
+        updateCount()
+    }
+    func updateCount(){
         seatNo.text = "\(Int(seatCount.value))"
     }
 
