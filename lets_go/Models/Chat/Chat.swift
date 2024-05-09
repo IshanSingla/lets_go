@@ -10,10 +10,9 @@ import SQLite3
 
 struct Chat: Codable {
     var id: String = NSUUID().uuidString
-    var userId1: String
-    var userId2: String
-    var user1: User?
-    var user2: User?
+    var userIds: [String]
+    var users: [User]?
+    var anotherUser: User?
     var createdAt: Date = Date()
     var updatedAt: Date = Date()
     var messages: [Message]?
@@ -24,9 +23,10 @@ import Foundation
 class ChatRepository {
     private var chats: [Chat] = []
     private let fileURL: URL
+    private var userRepo = UserRepository()
     
     init() {
-        self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("chats.plist")
+        self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("chat.plist")
         loadChats()
     }
     
@@ -34,6 +34,18 @@ class ChatRepository {
         if let data = try? Data(contentsOf: fileURL),
            let loadedChats = try? PropertyListDecoder().decode([Chat].self, from: data) {
             chats = loadedChats
+            if loadedChats.isEmpty {
+                let users = userRepo.findAll()
+                for x in 0..<users.count {
+                    for y in (x+1)..<users.count {
+                        if x != y {
+                            let chat = Chat(userIds: [users[x].id, users[y].id])
+                            create(chat: chat)
+                        }
+                    }
+                    
+                }
+            }
         }
     }
     

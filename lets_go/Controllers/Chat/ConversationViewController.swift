@@ -7,139 +7,30 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     var chat: Chat!
-    
-    var data: [Message]=[
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "lorem ipsum dolor sit amet consectetur adipiscing elit. lorem ipsum dolor sit amet consectetur adipiscing elit",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "lorem ipsum dolor sit amet consectetur adipiscing elit",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "lorem ipsum dolor sit amet consectetur adipiscing elit",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "lorem ipsum dolor sit amet consectetur adipiscing elit. lorem ipsum dolor sit amet consectetur adipiscing elit",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "lorem ipsum dolor sit amet consectetur adipiscing elit",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "lorem ipsum dolor sit amet consectetur adipiscing elit",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "1",
-            message: "Hello",
-            createdAt: Date()
-        ),
-        Message(
-            id: "1",
-            chatId: "1",
-            userId: "2",
-            message: "Hello",
-            createdAt: Date()
-        ),
-    ]
+    private var data: [Message]=[]
+    private var chatService: ChatService!
+    private var authService: AuthService!
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         tableView.separatorStyle = .none
-            // Remove extra padding
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.dataSource = self
         tableView.delegate = self
+        self.title = chat.anotherUser?.name
+        chatService = ChatService()
+        authService = AuthService()
+        let messages = try? chatService.getAllMessages(for: chat.id)
+        data = messages!
         scrollToBottom(animated: false)
-        
-        self.title = chat.userId2
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
                 NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -147,8 +38,37 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
                 // Set up tap gesture recognizer to dismiss keyboard
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
                 view.addGestureRecognizer(tapGesture)
+        
+        textField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+           // Move the text field upwards when the keyboard appears
+           animateViewMoving(up: true, moveValue: 250)
+       }
+       
+       func textFieldDidEndEditing(_ textField: UITextField) {
+           // Restore the original position when the keyboard disappears
+           animateViewMoving(up: false, moveValue: 250)
+       }
+       
+       func animateViewMoving(up: Bool, moveValue: CGFloat) {
+           let movementDuration: TimeInterval = 0.3
+           let movement: CGFloat = (up ? -moveValue : moveValue)
+           
+           UIView.beginAnimations("animateView", context: nil)
+           UIView.setAnimationBeginsFromCurrentState(true)
+           UIView.setAnimationDuration(movementDuration)
+           self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+           UIView.commitAnimations()
+       }
+       
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+           return true
+       }
     
     @objc func keyboardWillShow(notification: Notification) {
             guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
@@ -171,8 +91,9 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         }
     
     func scrollToBottom(animated: Bool) {
-            let indexPath = IndexPath(row: data.count - 1, section: 0)
-            tableView.scrollToRow(at: indexPath, at: .bottom, animated: animated)
+            if data.count > 0 {
+                tableView.scrollToRow(at: IndexPath(row: data.count - 1, section: 0), at: .bottom, animated: animated)
+            }
         }
 
         // Implement dynamic cell heights
@@ -187,9 +108,9 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let chat = data[indexPath.row]
-        let condition = chat.userId == "1"
+        let user = try? authService.getCurrentUser()
+        let condition = chat.userId == user!.id
         let cell = tableView.dequeueReusableCell(withIdentifier: "message", for: indexPath) as! ConversationTableViewCell
         cell.message.text = chat.message
         cell.message.numberOfLines = 0 // Allow label to wrap multiple lines
@@ -197,13 +118,6 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
 //        cell.message.center.x = condition ? 90 : -90
         cell.message.backgroundColor = condition ? UIColor.red.withAlphaComponent(0.65) : UIColor.systemGray4
         cell.message.textColor = condition ? UIColor.white : UIColor.black
-//        if condition {
-//            cell.message.center.x = cell.center.x + 90
-//        } else {
-//            cell.message.center.x = cell.center.x - 90
-//            
-//        }
-        // Calculate the height needed for the label based on its content
         let labelSize = cell.message.sizeThatFits(CGSize(width: tableView.frame.width - 20, height: CGFloat.greatestFiniteMagnitude))
         cell.message.frame = CGRect(
             x: condition ? cell.center.x - 12 : cell.center.x - 188,
@@ -211,8 +125,5 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
             width: 200,
             height: labelSize.height+15)
         return cell
-        
     }
-
-
 }

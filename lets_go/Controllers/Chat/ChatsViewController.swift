@@ -10,76 +10,22 @@ import UIKit
 class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var TavleView: UITableView!
-    var data: [Chat] = [
-        Chat(
-            id: "1",
-            userId1: "1",
-            userId2: "User 1",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "2",
-            userId1: "1",
-            userId2: "User 2",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "3",
-            userId1: "1",
-            userId2: "User 3",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "4",
-            userId1: "1",
-            userId2: "User 4",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "2",
-            userId1: "1",
-            userId2: "User 2",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "3",
-            userId1: "1",
-            userId2: "User 3",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "4",
-            userId1: "1",
-            userId2: "User 4",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "2",
-            userId1: "1",
-            userId2: "User 2",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "3",
-            userId1: "1",
-            userId2: "User 3",
-            createdAt: Date()
-        ),
-        Chat(
-            id: "4",
-            userId1: "1",
-            userId2: "User 4",
-            createdAt: Date()
-        ),
-
-        
-    ]
+    private var data: [Chat] = []
+    private var chatService: ChatService!
+    
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         TavleView.dataSource = self
         TavleView.delegate = self
+        chatService = ChatService()
+        do {
+            data = try chatService.getAllChatsForCurrentUser()
+        } catch{
+            
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -95,7 +41,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let chat = data[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ChatTableViewCell
-        cell.username.text = chat.userId2
+        cell.username.text = chat.anotherUser?.name
         cell.dateTime.text = chat.createdAt.description
 //
         return cell

@@ -29,7 +29,6 @@ class AuthService {
     }
     
     func sendOtp(_ email: String) throws -> String {
-        do {
             let otp = "123456" // Generate a random 6-digit OTP
             // sendOTP(email, otp) // Send the OTP to the user via email
             var userOtp = userOtpRepository.findOne(byEmail: email)
@@ -40,7 +39,7 @@ class AuthService {
                 userOtpRepository.update(userOtp: userOtp!)
                 return userOtp!.id
             } else {
-                var userOtp = UserOtp(
+                let userOtp = UserOtp(
                     email: email,
                     otp: otp,
                     expiry: Date().addingTimeInterval(60 * 5) // OTP expires in 5 minutes
@@ -48,20 +47,17 @@ class AuthService {
                 userOtpRepository.create(userOtp: userOtp)
                 return userOtp.id
             }
-        } catch {
-            throw AuthServiceError.otpVerificationFailed
-        }
     }
     
     func verifyOtp(byId id: String, otp: String) throws -> User {
-        var userOtp = userOtpRepository.findOne(byId: id)
+        let userOtp = userOtpRepository.findOne(byId: id)
         
         if userOtp != nil {
             if userOtp!.expiry < Date() {
                 throw AuthServiceError.otpExpired
             }
             if userOtp!.otp == otp {
-                let user: User? = userRepository.findOne(byEmail: userOtp!.email ?? "")
+                let user: User? = userRepository.findOne(byEmail: userOtp!.email)
                 if user != nil {
                     UserDefaults.standard.set(user!.id, forKey: "userId")
                     return user!
@@ -94,6 +90,8 @@ class AuthService {
         }
         user!.college = collegeRepository.findOne(byId: user!.collegeId)
         user!.addresses = addressRepository.findAll(byUserId: user!.id)
+        
+//        UserDefaults.standard.set(user, forKey: "user")
         return user!
     }
     

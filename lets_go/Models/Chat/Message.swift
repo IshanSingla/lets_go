@@ -20,6 +20,7 @@ struct Message: Codable {
 class MessageRepository {
     private var messages: [Message] = []
     private let fileURL: URL
+    private var chatRepo = ChatRepository()
     
     init() {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("messages.plist")
@@ -30,6 +31,17 @@ class MessageRepository {
         if let data = try? Data(contentsOf: fileURL),
            let loadedMessages = try? PropertyListDecoder().decode([Message].self, from: data) {
             messages = loadedMessages
+            if messages.isEmpty {
+                let chats = chatRepo.findAll()
+                for x in 0..<chats.count {
+                    let chat = chats[x]
+                    let users = chat.userIds
+                    for y in 0..<users.count {
+                        let message = Message(chatId: chat.id, userId: users[y], message: "Hello")
+                        create(message: message)
+                    }
+                }
+            }
         }
     }
     
@@ -47,7 +59,7 @@ class MessageRepository {
         return messages.first(where: { $0.id == id })
     }
     
-    func create(message: Message) {
+    func create(message: Message){
         messages.append(message)
         saveMessages()
     }
