@@ -46,6 +46,9 @@ class FAQsTableViewController: UITableViewController {
         showAlertWithAnswer(selectedFAQ.answer)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
     
     func showAlertWithAnswer(_ answer: String) {
         let alertController = UIAlertController(title: "Answer", message: answer, preferredStyle: .alert)
