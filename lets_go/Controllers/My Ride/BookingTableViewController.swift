@@ -21,19 +21,19 @@ class BookingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.count==0){
+        if (indexPath.row==0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellTimePriceRequest", for: indexPath)
             return cell
             
-        }else if (indexPath.count==1){
+        }else if (indexPath.row==1){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellPathRequest", for: indexPath)
             return cell
             
-        }else if (indexPath.count==2){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellCRequest", for: indexPath)
+        }else if (indexPath.row==2){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellContactRequest", for: indexPath)
             return cell
             
-        }else if (indexPath.count==3){
+        }else if (indexPath.row==3){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellCarDetailsRequest", for: indexPath)
             return cell
             

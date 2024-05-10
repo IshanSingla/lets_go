@@ -8,7 +8,6 @@
 import UIKit
 
 class MyRideTableViewCell: UITableViewCell {
-
     @IBOutlet weak var UserAvtar: UIImageView!
     @IBOutlet weak var UserName: UILabel!
 
