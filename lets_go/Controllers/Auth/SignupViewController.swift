@@ -6,6 +6,31 @@
 //
 
 import UIKit
+// MARK: - Data Model
+
+struct user {
+    let name: String
+    let mobileNumber: String
+    let universityID: String
+    let department: String
+    let year: String
+}
+
+class UserManager {
+    static let shared = UserManager()
+    
+    private var users: [user] = []
+    
+    // Add user to the data model
+    func addUser(user: user) {
+        users.append(user)
+    }
+    
+    // Get all users
+    func getAllUsers() -> [user] {
+        return users
+    }
+}
 
 class SignupViewController: UIViewController {
     
@@ -17,6 +42,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var year: UITextField!
     
     override func viewDidLoad() {
+        navigationItem.hidesBackButton = true
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
                 NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -49,7 +75,36 @@ class SignupViewController: UIViewController {
 
 
 
-    @IBAction func submit(_ sender: Any) {
-        
+    @IBAction func submit(_ sender: UIButton) {
+        guard let name = name.text, !name.isEmpty,
+                      let mobileNumber = mobileNumber.text, !mobileNumber.isEmpty,
+                      let universityID = rollNumber.text, !universityID.isEmpty,
+                      let department = department.text, !department.isEmpty,
+                      let year = year.text, !year.isEmpty else {
+                    // Show error message if any field is empty
+                    showAlert(message: "Please enter all fields.")
+                    return
+                }
+                
+                // Print input data to console
+                print("Name: \(name), Mobile Number: \(mobileNumber), University ID: \(universityID), Department: \(department), Year: \(year)")
+                
+                // Create a new user
+                let newUser = user(name: name, mobileNumber: mobileNumber, universityID: universityID, department: department, year: year)
+                
+                // Add the user to the data model
+                UserManager.shared.addUser(user: newUser)
+                
+                // Show success message
+                showAlert(message: "User data submitted successfully!")
+            }
+            
+            // Function to show alert message
+            func showAlert(message: String) {
+                let alert = UIAlertController(title: "Submission", message: message, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                present(alert, animated: true, completion: nil)
+            }
     }
-}
+
