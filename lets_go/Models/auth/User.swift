@@ -11,6 +11,7 @@ struct User: Codable {
     var id: String = NSUUID().uuidString
     var name: String
     var email: String
+    var mobileNumber: String?
     var rollnumber: String
     var department: String
     var year: String?
