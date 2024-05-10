@@ -10,147 +10,89 @@ import UIKit
 class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    var data: [Rides] = [
-        Rides(
-            userId: "1",
-            user: User(
-                id: "1",
-                name: "Kaushiv",
-                email: "",
-                rollnumber: "",
-                department: "",
-                collegeId: ""
-            ),
-            vehicleId: "1",
-            vehicle: Vehicle(
-                id: "1",
-                userId: "1",
-                vehicleName: "Honda City",
-                vehicleNumber: "PB08 1234",
-                vehicleType: "Car"
-            ),
-            fromId: "1",
-            toId: "1",
-            from: Address(
-                id: "1",
-                userId: "1",
-                address: "Chitkara University",
-                city: "Rajpura",
-                state: "Punjab",
-                country: "India",
-                pincode: "140401"
-            ),
-            to: Address(
-                id: "1",
-                userId: "1",
-                address: "118/2 Rajpura",
-                city: "Rajpura",
-                state: "Punjab",
-                country: "India",
-                pincode: "140401"
-            ),
-            
-            totalNoOfSeets: 3,
-            noOfSeetsAvailable: 3,
-            costPerSeet: 100,
-            dateTime: Date(),
-            bookings: []
-        ),
-        Rides(
-            userId: "1",
-            user: User(
-                id: "1",
-                name: "Kaushiv",
-                email: "",
-                rollnumber: "",
-                department: "",
-                collegeId: ""
-            ),
-            vehicleId: "1",
-            vehicle: Vehicle(
-                id: "1",
-                userId: "1",
-                vehicleName: "Honda City",
-                vehicleNumber: "PB08 1234",
-                vehicleType: "Car"
-            ),
-            fromId: "1",
-            toId: "1",
-                
-            from: Address(
-                id: "1",
-                userId: "1",
-                address: "Chitkara University",
-                city: "Rajpura",
-                state: "Punjab",
-                country: "India",
-                pincode: "140401"
-            ),
-            to: Address(
-                id: "1",
-                userId: "1",
-                address: "118/2 Rajpura",
-                city: "Rajpura",
-                state: "Punjab",
-                country: "India",
-                pincode: "140401"
-            ),
-            totalNoOfSeets: 3,
-            noOfSeetsAvailable: 3,
-            costPerSeet: 100,
-            dateTime: Date(),
-            bookings: []
-        ),
-        Rides(
-            userId: "1",
-            user: User(
-                id: "1",
-                name: "Kaushiv",
-                email: "",
-                rollnumber: "",
-                department: "",
-                collegeId: ""
-            ),
-            vehicleId: "1",
-            vehicle: Vehicle(
-                id: "1",
-                userId: "1",
-                vehicleName: "Honda City",
-                vehicleNumber: "PB08 1234",
-                vehicleType: "Car"
-            ),
-            fromId: "1",
-            toId: "1",
-            from: Address(
-                id: "1",
-                userId: "1",
-                address: "Chitkara University",
-                city: "Rajpura",
-                state: "Punjab",
-                country: "India",
-                pincode: "140401"
-            ),
-            to: Address(
-                id: "1",
-                userId: "1",
-                address: "118/2 Rajpura",
-                city: "Rajpura",
-                state: "Punjab",
-                country: "India",
-                pincode: "140401"
-            ),
-            totalNoOfSeets: 3,
-            noOfSeetsAvailable: 3,
-            costPerSeet: 100,
-            dateTime: Date(),
-            bookings: []
-        ),
-    ]
+    private var data: [Rides] = []
+    private var userRepo: UserRepository!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        userRepo = UserRepository()
+        let user = userRepo.findAll()
+        var vahicle = Vehicle(
+            id: "1",
+            userId: "1",
+            vehicleName: "Honda City",
+            vehicleNumber: "PB08 1234",
+            vehicleType: "Car"
+        )
+        let from = Address(
+            id: "1",
+            userId: "1",
+            address: "Chitkara University",
+            city: "Rajpura",
+            state: "Punjab",
+            country: "India",
+            pincode: "140401"
+        )
+        
+        let to = Address(
+            id: "1",
+            userId: "1",
+            address: "118/2 Rajpura",
+            city: "Rajpura",
+            state: "Punjab",
+            country: "India",
+            pincode: "140401"
+        )
+        data = [
+            Rides(
+                userId: "1",
+                user: user.first,
+                vehicleId: "1",
+                vehicle: vahicle,
+                fromId: "1",
+                toId: "1",
+                from: from,
+                to: to,
+                totalNoOfSeets: 3,
+                noOfSeetsAvailable: 3,
+                costPerSeet: 100,
+                dateTime: Date(),
+                bookings: []
+            ),
+            Rides(
+                userId: "1",
+                user: user[1],
+                vehicleId: "1",
+                vehicle: vahicle,
+                fromId: "1",
+                toId: "1",
+                from: from,
+                to: to,
+                totalNoOfSeets: 3,
+                noOfSeetsAvailable: 3,
+                costPerSeet: 100,
+                dateTime: Date(),
+                bookings: []
+            ),
+            Rides(
+                userId: "1",
+                user: user[1],
+                vehicleId: "1",
+                vehicle: vahicle,
+                fromId: "1",
+                toId: "1",
+                from: from,
+                to: to,
+                totalNoOfSeets: 3,
+                noOfSeetsAvailable: 3,
+                costPerSeet: 100,
+                dateTime: Date(),
+                bookings: []
+            ),
+        ]
         // Do any additional setup after loading the view.
     }
     
@@ -177,7 +119,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "MyRideSegue", sender: self)
+        self.performSegue(withIdentifier: "MyPublishesSegue", sender: self)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

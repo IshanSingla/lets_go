@@ -28,24 +28,24 @@ class ChatRepository {
     init() {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("chat.plist")
         loadChats()
+        if chats.isEmpty {
+            let users = userRepo.findAll()
+            for x in 0..<users.count {
+                for y in (x+1)..<users.count {
+                    if x != y {
+                        let chat = Chat(userIds: [users[x].id, users[y].id])
+                        create(chat: chat)
+                    }
+                }
+                
+            }
+        }
     }
     
     private func loadChats() {
         if let data = try? Data(contentsOf: fileURL),
            let loadedChats = try? PropertyListDecoder().decode([Chat].self, from: data) {
             chats = loadedChats
-            if loadedChats.isEmpty {
-                let users = userRepo.findAll()
-                for x in 0..<users.count {
-                    for y in (x+1)..<users.count {
-                        if x != y {
-                            let chat = Chat(userIds: [users[x].id, users[y].id])
-                            create(chat: chat)
-                        }
-                    }
-                    
-                }
-            }
         }
     }
     

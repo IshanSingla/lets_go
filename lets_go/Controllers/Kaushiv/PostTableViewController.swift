@@ -7,7 +7,8 @@
 
 import UIKit
 
-class PostTableViewController: UITableViewController  {
+class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource
+{
 
 
  
@@ -19,8 +20,10 @@ class PostTableViewController: UITableViewController  {
     @IBOutlet weak var seatNo: UILabel!
     @IBOutlet weak var seatCount: UIStepper!
     
-    private var fromOptions: [String]!
-    private var toOptions: [String]!
+    private var fromOptions: [String] = []
+    private var toOptions: [String] = []
+    private let fromPlacePickerView = UIPickerView()
+    private let toPlacePickerView = UIPickerView()
     
     
 //    let fromTextIndexPath = IndexPath(row: 0, section: 0)
@@ -80,17 +83,17 @@ class PostTableViewController: UITableViewController  {
         
         seatCount.maximumValue = 4
         
-//        fromOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
-//        toOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
-//        fromPlacePickerView.dataSource = self
-//        fromPlacePickerView.delegate = self
-//        toPlacePickerView.dataSource = self
-//        toPlacePickerView.delegate = self
-//        tableView.separatorStyle = .none
-//        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//
-//        fromText.inputView = fromPlacePickerView
-//        toText.inputView = toPlacePickerView
+        fromOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+        toOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+        fromPlacePickerView.dataSource = self
+        fromPlacePickerView.delegate = self
+        toPlacePickerView.dataSource = self
+        toPlacePickerView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
+        fromText.inputView = fromPlacePickerView
+        toText.inputView = toPlacePickerView
     }
     
 //    override func viewDidLoad() {
@@ -140,31 +143,31 @@ class PostTableViewController: UITableViewController  {
         updateCount()
     }
     
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        if pickerView == fromPlacePickerView {
-//            return fromOptions.count
-//        } else {
-//            return toOptions.count
-//        }
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        if pickerView == fromPlacePickerView {
-//            return fromOptions[row]
-//        } else {
-//            return toOptions[row]
-//        }
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        if pickerView == fromPlacePickerView {
-//            // Code to handle the selection of an item
-//        } else {
-//            // Code to handle the selection of an item
-//        }
-//    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == fromPlacePickerView {
+            return fromOptions.count
+        } else {
+            return toOptions.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == fromPlacePickerView {
+            return fromOptions[row]
+        } else {
+            return toOptions[row]
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == fromPlacePickerView {
+            // Code to handle the selection of an item
+        } else {
+            // Code to handle the selection of an item
+        }
+  }
 }
