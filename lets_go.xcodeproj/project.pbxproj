@@ -13,6 +13,7 @@
 		3F17683B2BEE025900AC3265 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17683A2BEE025900AC3265 /* AddressTableViewCell.swift */; };
 		3F17683D2BEE039000AC3265 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17683C2BEE039000AC3265 /* VehicleTableViewCell.swift */; };
 		3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48F932BE210B80032CB47 /* LoginViewController.swift */; };
+		3FFC61BE2BEF42DC0038DECF /* StartrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC61BD2BEF42DC0038DECF /* StartrideViewController.swift */; };
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
 		AF0335202BDAB8E700F0C796 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */; };
 		AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */; };
@@ -86,6 +87,7 @@
 		3F17683A2BEE025900AC3265 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 		3F17683C2BEE039000AC3265 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		3FC48F932BE210B80032CB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3FFC61BD2BEF42DC0038DECF /* StartrideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartrideViewController.swift; sourceTree = "<group>"; };
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
 		AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		AF03352A2BDAD9F500F0C796 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				AFB916992BEE33A4001C5D58 /* MyRideTableViewCell.swift */,
 				AF53F11D2BED104900E45AA9 /* BookingTableViewController.swift */,
 				AF03351F2BDAB8E700F0C796 /* BookingViewController.swift */,
+				3FFC61BD2BEF42DC0038DECF /* StartrideViewController.swift */,
 			);
 			path = "My Ride";
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				3F1768372BEDFAEC00AC3265 /* MyVehicleTableViewController.swift in Sources */,
 				AF25009F2BEA937600FB5FBA /* FAQsTableViewController.swift in Sources */,
 				AFB480A02BE3B78B00E9EEEA /* FindTableViewController.swift in Sources */,
+				3FFC61BE2BEF42DC0038DECF /* StartrideViewController.swift in Sources */,
 				AF03352B2BDAD9F500F0C796 /* HomeViewController.swift in Sources */,
 				3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */,
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,

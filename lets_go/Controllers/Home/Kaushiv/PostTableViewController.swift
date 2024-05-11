@@ -25,96 +25,29 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     private let fromPlacePickerView = UIPickerView()
     private let toPlacePickerView = UIPickerView()
     
-    
-//    let fromTextIndexPath = IndexPath(row: 0, section: 0)
-//    let fromPlacePickerViewIndexPath = IndexPath(row: 1, section: 0)
-//    let toTextIndexPath = IndexPath(row: 2, section: 0)
-//    let toPlacePickerViewIndexPath = IndexPath(row: 3, section: 0)
-//
-//    var isfromPlacePickerViewVisible:Bool = false{
-//        didSet{
-//            fromPlacePickerView.isHidden = !isfromPlacePickerViewVisible
-//        }
-//        
-//    }
-//    var istoPlacePickerViewVisible:Bool = false{
-//        didSet{
-//            toPlacePickerView.isHidden = !istoPlacePickerViewVisible
-//        }
-//        
-//    }
-    
-    
-    
-//
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath{
-//        case fromPlacePickerViewIndexPath where isfromPlacePickerViewVisible == false : return 0
-//        case toPlacePickerViewIndexPath where istoPlacePickerViewVisible == false : return 0
-//        default: return UITableView.automaticDimension
-//        }
-//    }
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath{
-//        case fromPlacePickerViewIndexPath: return 190
-//        case toPlacePickerViewIndexPath: return 190
-//        default: return UITableView.automaticDimension
-//        }
-//    }
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        if(indexPath == fromTextIndexPath && istoPlacePickerViewVisible == false){
-//            isfromPlacePickerViewVisible.toggle()
-//        }
-//        else if(indexPath == toTextIndexPath && isfromPlacePickerViewVisible == false){
-//            istoPlacePickerViewVisible.toggle()
-//        }
-//        else if(indexPath == fromTextIndexPath || indexPath == toTextIndexPath){
-//            isfromPlacePickerViewVisible.toggle()
-//            istoPlacePickerViewVisible.toggle()
-//        }
-//        else{return}
-//        tableView.beginUpdates()
-//        tableView.endUpdates()
-//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         seatCount.maximumValue = 4
         
-        fromOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
-        toOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
+        fromOptions = ["Chitkara University", "Sector 23 chandigarh", "Rajpura", "Ambala", "Zirakpur","Panchkula","Patiala"]
+        toOptions = ["Chitkara University", "Sector 23 chandigarh", "Rajpura", "Ambala", "Zirakpur","Panchkula","Patiala"]
+        
         fromPlacePickerView.dataSource = self
         fromPlacePickerView.delegate = self
+        
         toPlacePickerView.dataSource = self
         toPlacePickerView.delegate = self
+        
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
         fromText.inputView = fromPlacePickerView
         toText.inputView = toPlacePickerView
     }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        seatCount.maximumValue = 3
-//        
-//        let fromOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
-//           let toOptions = ["Chitkara University ", "Sector 23 chandigarh", "Rajpura"]
-//           fromPlacePickerView.dataSource = self
-//           fromPlacePickerView.delegate = self
-//           toPlacePickerView.dataSource = self
-//           toPlacePickerView.delegate = self
-//
-//        // Uncomment the following line to preserve selection between presentations
-//        // self.clearsSelectionOnViewWillAppear = false
-//
-//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-//    }
-    
+
     
 
    
@@ -166,7 +99,11 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == fromPlacePickerView {
             // Code to handle the selection of an item
+            fromText.text = fromOptions[row]
+                        fromText.resignFirstResponder()
         } else {
+            toText.text = toOptions[row]
+                        toText.resignFirstResponder()
             // Code to handle the selection of an item
         }
   }
