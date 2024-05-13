@@ -56,9 +56,9 @@ class ProfileTableViewController: UITableViewController {
                 do {
                     try authService.logout()
                     let storyboard = UIStoryboard(name: "AuthApp", bundle: nil)
-                    let vc = storyboard.instantiateViewController(identifier: "LoginNC") as! UINavigationController
+                    let vc = storyboard.instantiateViewController(identifier: "OnboardingNC") as! UINavigationController
                     vc.modalPresentationStyle = .fullScreen
-                    vc.modalTransitionStyle = .flipHorizontal
+                    vc.modalTransitionStyle = .coverVertical
                     present(vc, animated: true, completion: nil)
                 } catch {
                     print("Error: \(error)")

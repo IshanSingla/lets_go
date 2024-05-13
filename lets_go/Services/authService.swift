@@ -69,6 +69,7 @@ class AuthService {
     }
     
     func signupUser(user: User) throws -> Bool {
+        print(user)
         userRepository.create(user: user)
         UserDefaults.standard.set(user.id, forKey: "userId")
         return true

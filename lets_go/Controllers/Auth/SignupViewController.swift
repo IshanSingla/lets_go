@@ -3,30 +3,6 @@
 import UIKit
 // MARK: - Data Model
 
-struct user {
-    let name: String
-    let mobileNumber: String
-    let universityID: String
-    let department: String
-    let year: String
-}
-
-class UserManager {
-    static let shared = UserManager()
-    
-    private var users: [user] = []
-    
-    // Add user to the data model
-    func addUser(user: user) {
-        users.append(user)
-    }
-    
-    // Get all users
-    func getAllUsers() -> [user] {
-        return users
-    }
-}
-
 class SignupViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -35,10 +11,23 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var rollNumber: UITextField!
     @IBOutlet weak var department: UITextField!
     @IBOutlet weak var year: UITextField!
+    var email: String!
+    private var user: User!
+    
+    private var userService: UserService = UserService()
+    private var authService: AuthService = AuthService()
     
     override func viewDidLoad() {
         navigationItem.hidesBackButton = true
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        let newuser = try! userService.getUserInfoDuringSignup(email: email ?? "")
+        name.text = newuser.name
+        mobileNumber.text = newuser.mobileNumber
+        rollNumber.text = newuser.rollnumber
+        department.text = newuser.department
+        year.text = newuser.year
+        user = newuser
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
                 NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
                 
@@ -81,17 +70,20 @@ class SignupViewController: UIViewController {
                     return
                 }
                 
-                // Print input data to console
-                print("Name: \(name), Mobile Number: \(mobileNumber), University ID: \(universityID), Department: \(department), Year: \(year)")
-                
-                // Create a new user
-                let newUser = user(name: name, mobileNumber: mobileNumber, universityID: universityID, department: department, year: year)
-                
-                // Add the user to the data model
-                UserManager.shared.addUser(user: newUser)
-                
+        user.name = name
+        user.mobileNumber = mobileNumber
+        user.rollnumber = universityID
+        user.department = department
+        user.year = year
+        let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! UITabBarController
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+        present(vc, animated: true, completion: nil)
+        try! authService.signupUser(user: user)
                 // Show success message
                 showAlert(message: "User data submitted successfully!")
+        
             }
             
             // Function to show alert message

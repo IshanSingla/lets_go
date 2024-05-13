@@ -56,8 +56,8 @@ class ChatService {
     }
     
     // Function to create a message in a particular chat
-    func createMessage(inChat chatId: String, withMessage message: String) throws {
-        guard let currentUser = UserDefaults.standard.object(forKey: "user") as? User else {
+    func createMessage(inChat chatId: String, withMessage message: String) throws-> Message {
+        guard let currentUser = UserDefaults.standard.object(forKey: "userId") as? String else {
             throw ChatError.currentUserNotFound
         }
         
@@ -65,10 +65,11 @@ class ChatService {
             throw ChatError.chatNotFound
         }
         
-        guard chat.userIds.contains(currentUser.id) else {
+        guard chat.userIds.contains(currentUser) else {
             throw ChatError.chatNotFound
         }
-        let newMessage = Message(chatId: chatId, userId: currentUser.id, message: message)
+        let newMessage = Message(chatId: chatId, userId: currentUser, message: message)
         messageRepository.create(message: newMessage)
+        return newMessage
     }
 }
