@@ -75,12 +75,12 @@ class SignupViewController: UIViewController {
         user.rollnumber = universityID
         user.department = department
         user.year = year
+        try! authService.signupUser(user: user)
         let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! UITabBarController
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
         present(vc, animated: true, completion: nil)
-        try! authService.signupUser(user: user)
                 // Show success message
                 showAlert(message: "User data submitted successfully!")
         

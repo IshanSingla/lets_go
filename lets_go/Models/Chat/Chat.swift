@@ -24,22 +24,25 @@ class ChatRepository {
     private var chats: [Chat] = []
     private let fileURL: URL
     private var userRepo = UserRepository()
+    private var authService = AuthService()
     
     init() {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("chat.plist")
         loadChats()
-        if chats.isEmpty {
-            let users = userRepo.findAll()
-            for x in 0..<users.count {
-                for y in (x+1)..<users.count {
-                    if x != y {
-                        let chat = Chat(userIds: [users[x].id, users[y].id])
-                        create(chat: chat)
+        var user = try! authService.getCurrentUser()
+        // Create chat of current user with all other users if no chat exists
+                
+                if (chats.contains(where: { $0.userIds.contains(user.id) })) {
+                    return
+                }else {
+                    let users = userRepo.findAll()
+                    for u in users {
+                        if u.id != user.id {
+                            let chat = Chat(userIds: [user.id, u.id])
+                            create(chat: chat)
+                        }
                     }
                 }
-                
-            }
-        }
     }
     
     private func loadChats() {

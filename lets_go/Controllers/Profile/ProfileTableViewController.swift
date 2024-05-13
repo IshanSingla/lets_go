@@ -11,6 +11,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     
+    @IBOutlet weak var mobileNumber: UILabel!
     @IBOutlet weak var department: UILabel!
     @IBOutlet weak var college: UILabel!
     
@@ -21,6 +22,7 @@ class ProfileTableViewController: UITableViewController {
             email.text = user?.email
             department.text = user?.department
             college.text = user?.college?.name
+            mobileNumber.text = user?.mobileNumber
         }
     }
     private var userRepository: UserRepository = UserRepository()
