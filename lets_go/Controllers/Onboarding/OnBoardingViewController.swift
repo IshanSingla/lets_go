@@ -58,10 +58,10 @@ class OnBoardingsViewController: UIViewController, UICollectionViewDelegate, UIC
 //            vc.modalPresentationStyle = .fullScreen
 //            vc.modalTransitionStyle = .flipHorizontal
 //            present(vc, animated: true, completion: nil)
-//            
+//
 //        }
 //        catch{
-//            
+//
 //        }
         
     }
@@ -79,10 +79,11 @@ class OnBoardingsViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func navigateLogin() {
-        let vc = storyboard?.instantiateViewController(identifier: "LoginNC") as! UINavigationController
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .flipHorizontal
-        present(vc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "LoginVc", sender: self)
+//        let vc = storyboard?.instantiateViewController(identifier: "LoginNC") as! UINavigationController
+//        vc.modalPresentationStyle = .fullScreen
+//        vc.modalTransitionStyle = .coverVertical
+//        present(vc, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

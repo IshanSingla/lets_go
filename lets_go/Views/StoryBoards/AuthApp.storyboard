@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg1-w6-woK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13515.267175572519" y="-3395.0704225352115"/>
+            <point key="canvasLocation" x="15764" y="-3404"/>
         </scene>
         <!--On Boardings View Controller-->
         <scene sceneID="ihv-Fx-XVh">
@@ -146,11 +146,12 @@
                         <outlet property="nextButton" destination="shN-6X-GXn" id="k3M-cl-jYK"/>
                         <outlet property="pageControl" destination="Ywa-wt-Q3z" id="lT1-Ng-NDv"/>
                         <outlet property="skipButton" destination="kc4-w9-iXs" id="JEA-3E-F5w"/>
+                        <segue destination="FeN-vn-Nun" kind="show" identifier="LoginVc" id="C4u-j5-Z1Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1W-Tb-ogA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14441.984732824427" y="-3395.0704225352115"/>
+            <point key="canvasLocation" x="16691" y="-3404"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="uVw-1b-Pmn">
@@ -305,24 +306,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvT-3a-oCR" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="17591.603053435112" y="-3403.5211267605637"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lPt-Wm-7hq">
-            <objects>
-                <navigationController storyboardIdentifier="LoginNC" automaticallyAdjustsScrollViewInsets="NO" id="8P1-n3-Jgx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5g6-4s-Vow">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FeN-vn-Nun" kind="relationship" relationship="rootViewController" id="9QV-2B-A4n"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aGa-ew-21O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="16664.885496183204" y="-3403.5211267605637"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="hbL-zE-Xfq">

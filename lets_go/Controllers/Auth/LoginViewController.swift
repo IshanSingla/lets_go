@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isShowing = false
+        self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
                 NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -104,7 +105,7 @@ class LoginViewController: UIViewController {
             let storyboard = UIStoryboard(name: "AuthorisedApp", bundle: nil)
             let vc = storyboard.instantiateInitialViewController() as! UITabBarController
             vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .flipHorizontal
+            vc.modalTransitionStyle = .coverVertical
             present(vc, animated: true, completion: nil)
 //            performSegue(withIdentifier: "completeInfoIdentifier", sender: user)
         } catch {
@@ -136,6 +137,13 @@ class LoginViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignupVC" {
+            let vc = segue.destination as! SignupViewController
+            vc.email = emailTextField.text
+        }
     }
     
  

@@ -18,8 +18,17 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textField: UITextField!
     
-    override func viewDidLoad() {
+    @IBAction func sendMessage(_ sender: Any) {
+        var message = try? chatService.createMessage(inChat: chat.id, withMessage: textField.text ?? "")
+        textField.text = ""
+        data.append(message!)
+        tableView.reloadData()
+        scrollToBottom(animated: true)
         
+//        scrollToBottom(animated: false)
+    }
+    override func viewDidLoad() {
+    
         super.viewDidLoad()
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
