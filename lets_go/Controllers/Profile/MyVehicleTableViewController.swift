@@ -8,41 +8,14 @@
 import UIKit
 
 class MyVehicleTableViewController: UITableViewController {
+    private var authService: AuthService = AuthService()
     
-    private var data: [Vehicle] = [
-        Vehicle(
-           id: "1",
-           userId: "1",
-           vehicleName: "Honda City",
-           vehicleNumber: "PB08 1234",
-           vehicleType: "Car"
-       ),
-
-        Vehicle(
-           id: "1",
-           userId: "1",
-           vehicleName: "baleno",
-           vehicleNumber: "CH01 4325",
-           vehicleType: "Car"
-       ),
-        Vehicle(
-           id: "1",
-           userId: "1",
-           vehicleName: "Swift",
-           vehicleNumber: "CH02 4354",
-           vehicleType: "Car"
-       ),
-        Vehicle(
-           id: "1",
-           userId: "1",
-           vehicleName: "Honda City",
-           vehicleNumber: "PB08 1234",
-           vehicleType: "Car"
-       ),
-    ]
+    private var data: [Vehicle] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = try! authService.getCurrentUser()
+        data = user.vehicles ?? []
     }
 
 

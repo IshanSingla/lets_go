@@ -26,6 +26,13 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     private let toPlacePickerView = UIPickerView()
     
 
+
+    @IBAction func handlePost(_ sender: Any) {
+        if let tabBarController = self.tabBarController {
+            // Set the index of the tab you want to select
+            tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

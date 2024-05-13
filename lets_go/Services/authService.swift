@@ -15,12 +15,14 @@ class AuthService {
     private var userOtpRepository: UserOtpRepository!
     private var collegeRepository: CollegeRepository!
     private var addressRepository: AddressRepository!
+    private var vehicleRepository: VehicleRepository!
     
     init() {
         userRepository = UserRepository()
         userOtpRepository = UserOtpRepository()
         collegeRepository = CollegeRepository()
         addressRepository = AddressRepository()
+        vehicleRepository = VehicleRepository()
     }
     
     func sendOtp(_ email: String) throws -> String {
@@ -86,8 +88,7 @@ class AuthService {
         }
         user!.college = collegeRepository.findOne(byId: user!.collegeId)
         user!.addresses = addressRepository.findAll(byUserId: user!.id)
-        
-//        UserDefaults.standard.set(user, forKey: "user")
+        user!.vehicles = vehicleRepository.findAll(byUserId: user!.id)
         return user!
     }
     

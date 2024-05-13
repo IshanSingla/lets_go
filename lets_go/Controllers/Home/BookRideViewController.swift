@@ -28,6 +28,13 @@ class BookRideViewController: UITableViewController {
         return 6
     }
     
+    @IBAction func reqButton(_ sender: Any) {
+        if let tabBarController = self.tabBarController {
+            // Set the index of the tab you want to select
+            tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black

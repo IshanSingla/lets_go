@@ -27,6 +27,23 @@ class AddressRepository {
     init() {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("addresses.plist")
         loadAddresses()
+        var user = try! AuthService().getCurrentUser()
+        if addresses.contains(where: { $0.userId == user.id}){
+            return
+        }else {
+            create(
+                address:
+                    Address(
+                        userId: user.id,
+                        address: "118/2",
+                        city: "Rajpura",
+                        state: "Punjab",
+                        country: "India",
+                        pincode: "140401"
+                )
+            )
+        }
+            
     }
     
     private func loadAddresses() {

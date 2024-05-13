@@ -24,13 +24,11 @@ class ChatRepository {
     private var chats: [Chat] = []
     private let fileURL: URL
     private var userRepo = UserRepository()
-    private var authService = AuthService()
     
     init() {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("chat.plist")
         loadChats()
-        var user = try! authService.getCurrentUser()
-        // Create chat of current user with all other users if no chat exists
+        var user = try! AuthService().getCurrentUser()
                 
                 if (chats.contains(where: { $0.userIds.contains(user.id) })) {
                     return

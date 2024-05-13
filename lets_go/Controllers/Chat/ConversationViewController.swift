@@ -22,10 +22,9 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         var message = try? chatService.createMessage(inChat: chat.id, withMessage: textField.text ?? "")
         textField.text = ""
         data.append(message!)
+        self.dismissKeyboard()
         tableView.reloadData()
         scrollToBottom(animated: true)
-        
-//        scrollToBottom(animated: false)
     }
     override func viewDidLoad() {
     
@@ -39,6 +38,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         authService = AuthService()
         let messages = try? chatService.getAllMessages(for: chat.id)
         data = messages!
+        self.tableView.backgroundColor = UIColor.systemGray6
         scrollToBottom(animated: false)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -84,14 +84,18 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
                 return
             }
             let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
-            scrollView.contentInset = contentInsets
-            scrollView.scrollIndicatorInsets = contentInsets
+        tableView.contentInset = contentInsets
+            tableView.scrollIndicatorInsets = contentInsets
+//            scrollView.contentInset = contentInsets
+//            scrollView.scrollIndicatorInsets = contentInsets
         }
         
         // Function to handle keyboard disappearing
         @objc func keyboardWillHide(notification: Notification) {
-            scrollView.contentInset = .zero
-            scrollView.scrollIndicatorInsets = .zero
+            tableView.contentInset = .zero
+            tableView.scrollIndicatorInsets = .zero
+//            scrollView.contentInset = .zero
+//            scrollView.scrollIndicatorInsets = .zero
         }
         
         // Function to dismiss keyboard when tapping outside of text field
@@ -100,7 +104,13 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         }
     
     func scrollToBottom(animated: Bool) {
-            if data.count > 0 {
+            if data.count < 0 {
+                return
+            }else if data.count < 6 {
+                tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: animated)
+//                scrollView.scrollsToTop
+                
+            }else {
                 tableView.scrollToRow(at: IndexPath(row: data.count - 1, section: 0), at: .bottom, animated: animated)
             }
         }
