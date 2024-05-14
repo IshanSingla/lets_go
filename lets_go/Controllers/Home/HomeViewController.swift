@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        searchForLocation("Chitkara University Punjab")
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             // Dismiss the keyboard
@@ -57,7 +58,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
             
             // Adjust the map region to fit the annotations
             if let firstResult = response.mapItems.first {
-                let region = MKCoordinateRegion(center: firstResult.placemark.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                let region = MKCoordinateRegion(center: firstResult.placemark.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004))
                 self.mapView.setRegion(region, animated: true)
             }
         }

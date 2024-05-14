@@ -153,9 +153,9 @@ class ProfileTableViewController: UITableViewController {
         var college = user!.college
         var userDetails = """
         
-        Name: \(college!.name ?? "")
-        Address: \(college!.address ?? "")
-        Website: \(college!.domain ?? "")
+        Name: \(college!.name)
+        Address: \(college!.address.address) \(college!.address.city) \(college!.address.state)
+        Website: \(college!.domain)
         """
         
         let alertController = UIAlertController(title: "College Details", message: userDetails, preferredStyle: .alert)

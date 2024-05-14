@@ -10,7 +10,7 @@ import Foundation
 struct College: Codable {
     var id: String = NSUUID().uuidString
     var name: String
-    var address: String
+    var address: Address
     var domain: String
     var createdAt: Date = Date()
     var updatedAt: Date = Date()
@@ -26,30 +26,30 @@ class CollegeRepository {
         if colleges.isEmpty {
             create(college: College(
                 name: "Chitkara University",
-                address: "Chandigarh, Punjab",
+                address: Address( 
+                    address: "Chitkara University",
+                    city: "Rjpura",
+                    state: "Punjab",
+                    country: "India",
+                    pincode: "140401"
+                ),
                 domain: "chitkara.edu.in"
             )
             )
             
             create(college: College(
                 name: "Chitkara University Himachal Pradesh",
-                address: "Solan, Himachal Pradesh",
+                address: Address(
+                    address: "Chitkara University",
+                    city: "Solan",
+                    state: "Himachal Pradesh",
+                    country: "India",
+                    pincode: "140401"
+                ),
                 domain: "chitkarauniversity.edu.in"
             )
             )
             
-            create(college: College(
-                name: "Thapar Institute of Engineering and Technology",
-                address: "Patiala, Punjab",
-                domain: "thapar.edu"
-            )
-            )
-            create(college: College(
-                name: "PEC University of Technology",
-                address: "Chandigarh, Punjab",
-                domain: "pec.ac.in"
-            )
-            )
         }
     }
     

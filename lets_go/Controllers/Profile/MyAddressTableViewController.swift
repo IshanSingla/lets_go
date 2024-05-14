@@ -9,38 +9,12 @@ import UIKit
 
 class MyAddressTableViewController: UITableViewController {
     
-    private var data: [Address] = [
-        Address(
-            id: "1",
-            userId: "1",
-            address: "Chitkara University",
-            city: "Rajpura",
-            state: "Punjab",
-            country: "India",
-            pincode: "140401"
-        ),
-        Address(
-            id: "1",
-            userId: "1",
-            address: "118/2 Rajpura",
-            city: "Rajpura",
-            state: "Punjab",
-            country: "India",
-            pincode: "140401"
-        ),
-        Address(
-            id: "1",
-            userId: "1",
-            address: "118/2 Kaithal",
-            city: "Rajpura",
-            state: "Punjab",
-            country: "India",
-            pincode: "140401"
-        )
-    ]
+    private var data: [Address] = []
+    private var authService: AuthService = AuthService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = try! authService.getAddressesCurrentUser()
 
 
     }

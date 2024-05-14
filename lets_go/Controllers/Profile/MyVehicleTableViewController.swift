@@ -14,8 +14,7 @@ class MyVehicleTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = try! authService.getCurrentUser()
-        data = user.vehicles ?? []
+        data = try! authService.getVehicleesCurrentUser()
     }
 
 

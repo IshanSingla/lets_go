@@ -24,27 +24,28 @@ class VehicleRepository {
     init() {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("vehicles.plist")
         loadVehicles()
-        var user = try! AuthService().getCurrentUser()
-        if vehicles.contains(where: { $0.userId == user.id }) {
-            return
-        } else {
-            create(
-                vehicle: Vehicle(
-                    userId: user.id,
-                    vehicleName: "My Vehicle",
-                    vehicleNumber: "ABC123",
-                    vehicleType: "Car"
+        if let id = UserDefaults.standard.object(forKey: "userId") as? String {
+            if vehicles.contains(where: { $0.userId == id }) {
+                return
+            } else {
+                create(
+                    vehicle: Vehicle(
+                        userId: id,
+                        vehicleName: "My Vehicle",
+                        vehicleNumber: "ABC123",
+                        vehicleType: "Car"
+                    )
                 )
-            )
-            create(
-                vehicle: Vehicle(
-                    userId: user.id,
-                    vehicleName: "My Vehicle 2",
-                    vehicleNumber: "ABC1234",
-                    vehicleType: "Car"
+                create(
+                    vehicle: Vehicle(
+                        userId: id,
+                        vehicleName: "My Vehicle 2",
+                        vehicleNumber: "ABC1234",
+                        vehicleType: "Car"
+                    )
                 )
-            )
-            
+                
+            }
         }
     }
     

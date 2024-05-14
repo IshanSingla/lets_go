@@ -11,8 +11,8 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
 
     var chat: Chat!
     private var data: [Message]=[]
-    private var chatService: ChatService!
-    private var authService: AuthService!
+    private var chatService: ChatService = ChatService()
+    private var authService: AuthService = AuthService()
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -34,10 +34,9 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         tableView.dataSource = self
         tableView.delegate = self
         self.title = chat.anotherUser?.name
-        chatService = ChatService()
-        authService = AuthService()
-        let messages = try? chatService.getAllMessages(for: chat.id)
-        data = messages!
+        if let messages = try? chatService.getAllMessages(for: chat.id) {
+            data = messages
+        }
         self.tableView.backgroundColor = UIColor.systemGray6
         scrollToBottom(animated: false)
         
@@ -86,16 +85,16 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
             let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
         tableView.contentInset = contentInsets
             tableView.scrollIndicatorInsets = contentInsets
-//            scrollView.contentInset = contentInsets
-//            scrollView.scrollIndicatorInsets = contentInsets
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
         }
         
         // Function to handle keyboard disappearing
         @objc func keyboardWillHide(notification: Notification) {
             tableView.contentInset = .zero
             tableView.scrollIndicatorInsets = .zero
-//            scrollView.contentInset = .zero
-//            scrollView.scrollIndicatorInsets = .zero
+            scrollView.contentInset = .zero
+            scrollView.scrollIndicatorInsets = .zero
         }
         
         // Function to dismiss keyboard when tapping outside of text field
@@ -104,16 +103,14 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         }
     
     func scrollToBottom(animated: Bool) {
-            if data.count < 0 {
-                return
-            }else if data.count < 6 {
-                tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: animated)
-//                scrollView.scrollsToTop
-                
-            }else {
-                tableView.scrollToRow(at: IndexPath(row: data.count - 1, section: 0), at: .bottom, animated: animated)
-            }
+        if data.isEmpty {
+            return
+        } else if data.count < 6 {
+            tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: animated)
+        } else {
+            tableView.scrollToRow(at: IndexPath(row: data.count - 1, section: 0), at: .bottom, animated: animated)
         }
+    }
 
         // Implement dynamic cell heights
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

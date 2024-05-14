@@ -87,9 +87,26 @@ class AuthService {
             throw AuthServiceError.userNotFound
         }
         user!.college = collegeRepository.findOne(byId: user!.collegeId)
-        user!.addresses = addressRepository.findAll(byUserId: user!.id)
-        user!.vehicles = vehicleRepository.findAll(byUserId: user!.id)
+
         return user!
+    }
+    
+    func getAddressesCurrentUser () throws -> [Address] {
+        if let user = try? self.getCurrentUser(){
+            return addressRepository.findAll(byUserId: user.id)
+            
+        }else{
+            throw AuthServiceError.userNotFound
+        }
+    }
+    
+    func getVehicleesCurrentUser () throws -> [Vehicle] {
+        if let user = try? self.getCurrentUser(){
+            return vehicleRepository.findAll(byUserId: user.id)
+            
+        }else{
+            throw AuthServiceError.userNotFound
+        }
     }
     
     func logout() throws {

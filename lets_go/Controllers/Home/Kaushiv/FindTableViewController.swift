@@ -16,39 +16,46 @@ class FindTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var seatNo: UILabel!
     @IBOutlet weak var seatCount: UIStepper!
     
+    private var fromAddress: Address! {
+        didSet {
+            fromText.text = "\(self.fromAddress.address) \(self.fromAddress.city) \(self.fromAddress.state)"
+            fromText.resignFirstResponder()
+        }
+    }
+    private var toAddress: Address! {
+        didSet {
+            toText.text = "\(self.toAddress.address) \(self.toAddress.city) \(self.toAddress.state)"
+            toText.resignFirstResponder()
+        }
+        
+    }
+    private var authService: AuthService = AuthService()
+    private var address: [Address] = []
     
-    
-    private var fromOptions: [String] = []
-       private var toOptions: [String] = []
-       private let fromPlacePickerView = UIPickerView()
-       private let toPlacePickerView = UIPickerView()
+    private let fromPlacePickerView = UIPickerView()
+    private let toPlacePickerView = UIPickerView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        seatCount.maximumValue = 4
+        fromPlacePickerView.dataSource = self
+        fromPlacePickerView.delegate = self
+        toPlacePickerView.dataSource = self
+        toPlacePickerView.delegate = self
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
         datePicker.minimumDate = Date()
+        seatCount.maximumValue = 4
         
-             tableView.separatorStyle = .none
-             tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-             
-             datePicker.minimumDate = Date()
-             
-             // Setup picker views
-             fromOptions = ["Chitkara University", "Sector 23 chandigarh", "Rajpura", "Ambala", "Zirakpur" ,"Panchkula","Patiala"]
-             toOptions = ["Chitkara University", "Sector 23 chandigarh", "Rajpura", "Ambala", "Zirakpur","Panchkula","Patiala"]
-             
-             fromPlacePickerView.dataSource = self
-             fromPlacePickerView.delegate = self
-             
-             toPlacePickerView.dataSource = self
-             toPlacePickerView.delegate = self
-             
-             fromText.inputView = fromPlacePickerView
-             toText.inputView = toPlacePickerView
+        if let user = try? authService.getCurrentUser() {
+            var addresses = try! authService.getAddressesCurrentUser()
+            address = [user.college!.address]
+            for x in addresses {
+                address.append(x)
+            }
+        }
+        fromText.inputView = fromPlacePickerView
+        toText.inputView = toPlacePickerView
     }
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -73,30 +80,24 @@ class FindTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
         }
         
     @objc func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            if pickerView == fromPlacePickerView {
-                return fromOptions.count
-            } else {
-                return toOptions.count
-            }
-        }
+        address.count
+    }
         
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            if pickerView == fromPlacePickerView {
-                return fromOptions[row]
-            } else {
-                return toOptions[row]
-            }
-        }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let current = address[row]
+        return "\(current.address) \(current.city) \(current.state)"
+    }
         
-        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            if pickerView == fromPlacePickerView {
-                fromText.text = fromOptions[row]
-                fromText.resignFirstResponder() // Dismiss the picker after selection
-            } else {
-                toText.text = toOptions[row]
-                toText.resignFirstResponder() // Dismiss the picker after selection
-            }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let current = address[row]
+        if pickerView == fromPlacePickerView {
+            fromText.text = "\(current.address) \(current.city) \(current.state)"
+            fromText.resignFirstResponder() // Dismiss the picker after selection
+        } else {
+            toText.text = "\(current.address) \(current.city) \(current.state)"
+            toText.resignFirstResponder() // Dismiss the picker after selection
         }
+    }
     
 
 }
