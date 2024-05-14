@@ -16,6 +16,7 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var seatNo: UILabel!
     @IBOutlet weak var seatCount: UIStepper!
 
+    @IBOutlet weak var offerPrice: UITextField!
     private var fromAddress: Address! {
         didSet {
             fromText.text = "\(self.fromAddress.address) \(self.fromAddress.city) \(self.fromAddress.state)"
@@ -29,17 +30,15 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
         }
         
     }
+    private var seatNumber: Int = 0 {
+        didSet {
+            seatNo.text = "\(Int(seatCount.value))"
+        }
+    }
     private var authService: AuthService = AuthService()
     private var address: [Address] = []
     private let fromPlacePickerView = UIPickerView()
     private let toPlacePickerView = UIPickerView()
-    
-    @IBAction func handlePost(_ sender: Any) {
-        if let tabBarController = self.tabBarController {
-            // Set the index of the tab you want to select
-            tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +63,26 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
         toText.inputView = toPlacePickerView
     }
 
+    @IBAction func StepperChange(_ sender: UIStepper) {
+        seatNumber = Int(seatCount.value)
+    }
     
+    @IBAction func handlePost(_ sender: Any) {
+        guard let fromAddress = fromAddress, !fromAddress.address.isEmpty,
+                      let toAddress = toAddress, !toAddress.address.isEmpty,
+                      seatNumber > 0,
+                      datePicker.date > Date() else {
+                    // Show alert to inform the user to fill all required fields
+                    let alert = UIAlertController(title: "Incomplete Information", message: "Please fill all required fields.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+        if let tabBarController = self.tabBarController {
+            // Set the index of the tab you want to select
+            tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
+        }
+    }
 
    
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -82,14 +100,6 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
-    
-    func updateCount(){
-        seatNo.text = "\(Int(seatCount.value))"
-    }
-    @IBAction func StepperChange(_ sender: UIStepper) {
-        updateCount()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

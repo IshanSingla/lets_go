@@ -29,12 +29,15 @@ class FindTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
         }
         
     }
+    private var seatNumber: Int = 0 {
+        didSet {
+            seatNo.text = "\(Int(seatCount.value))"
+        }
+    }
     private var authService: AuthService = AuthService()
     private var address: [Address] = []
-    
     private let fromPlacePickerView = UIPickerView()
     private let toPlacePickerView = UIPickerView()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,31 +57,54 @@ class FindTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
                 address.append(x)
             }
         }
+
         fromText.inputView = fromPlacePickerView
         toText.inputView = toPlacePickerView
     }
 
+    @IBAction func StepperChange(_ sender: UIStepper) {
+        seatNumber = Int(seatCount.value)
+    }
+    
+    @IBAction func handlePost(_ sender: Any) {
+        guard let fromAddress = fromAddress, !fromAddress.address.isEmpty,
+                      let toAddress = toAddress, !toAddress.address.isEmpty,
+                      seatNumber > 0,
+                      datePicker.date > Date() else {
+                    // Show alert to inform the user to fill all required fields
+                    let alert = UIAlertController(title: "Incomplete Information", message: "Please fill all required fields.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+        if let tabBarController = self.tabBarController {
+            // Set the index of the tab you want to select
+            tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
+        }
+    }
+
+   
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 19)
         header.textLabel?.frame = CGRect(x: 12, y: 0, width: 300, height: 20)
+        
+        datePicker.minimumDate = Date()
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
     
-    @IBAction func stepperChanged(_ sender: UIStepper) {
-        updateCount()
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
-    func updateCount(){
-        seatNo.text = "\(Int(seatCount.value))"
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    @objc(numberOfComponentsInPickerView:) func numberOfComponents(in pickerView: UIPickerView) -> Int {
-            return 1
-        }
-        
+    
     @objc func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         address.count
     }
@@ -89,15 +115,11 @@ class FindTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     }
         
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let current = address[row]
         if pickerView == fromPlacePickerView {
-            fromText.text = "\(current.address) \(current.city) \(current.state)"
-            fromText.resignFirstResponder() // Dismiss the picker after selection
+            fromAddress = address[row]
         } else {
-            toText.text = "\(current.address) \(current.city) \(current.state)"
-            toText.resignFirstResponder() // Dismiss the picker after selection
+            toAddress = address[row]
         }
     }
-    
 
 }
