@@ -49,10 +49,12 @@ class RidesRepository {
     }
     
     func findAll() -> [Rides] {
+        loadRideses()
         return rides
     }
     
     func findOne(byId id: String) -> Rides? {
+        loadRideses()
         return rides.first(where: { $0.id == id })
     }
     

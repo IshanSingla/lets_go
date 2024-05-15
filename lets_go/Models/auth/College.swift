@@ -24,30 +24,35 @@ class CollegeRepository {
         self.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("colleges.plist")
         loadColleges()
         if colleges.isEmpty {
-            create(college: College(
-                name: "Chitkara University",
-                address: Address( 
-                    address: "Chitkara University",
-                    city: "Rjpura",
-                    state: "Punjab",
-                    country: "India",
-                    pincode: "140401"
-                ),
-                domain: "chitkara.edu.in"
+            var address = Address(
+                address: "Chitkara University",
+                city: "Rjpura",
+                state: "Punjab",
+                country: "India",
+                pincode: "140401"
             )
+            AddressRepository().create(address: address)
+            create(college: 
+                    College(
+                        name: "Chitkara University",
+                        address: address,
+                        domain: "chitkara.edu.in"
+                    )
             )
-            
-            create(college: College(
-                name: "Chitkara University Himachal Pradesh",
-                address: Address(
-                    address: "Chitkara University",
-                    city: "Solan",
-                    state: "Himachal Pradesh",
-                    country: "India",
-                    pincode: "140401"
-                ),
-                domain: "chitkarauniversity.edu.in"
+            address = Address(
+                address: "Chitkara University",
+                city: "Solan",
+                state: "Himachal Pradesh",
+                country: "India",
+                pincode: "140401"
             )
+            AddressRepository().create(address: address)
+            create(college: 
+                    College(
+                        name: "Chitkara University Himachal Pradesh",
+                        address: address,
+                        domain: "chitkarauniversity.edu.in"
+                    )
             )
             
         }

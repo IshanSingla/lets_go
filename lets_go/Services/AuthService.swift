@@ -86,9 +86,16 @@ class AuthService {
         if user == nil {
             throw AuthServiceError.userNotFound
         }
-        user!.college = collegeRepository.findOne(byId: user!.collegeId)
-
-        return user!
+        if let college = collegeRepository.findOne(byId: user!.collegeId) {
+            user!.college = collegeRepository.findOne(byId: user!.collegeId)
+            user!.vehicles = vehicleRepository.findAll(byUserId: user!.id)
+            
+            
+            return user!
+            
+        }else{
+            throw AuthServiceError.userNotFound
+        }
     }
     
     func getAddressesCurrentUser () throws -> [Address] {

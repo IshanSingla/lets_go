@@ -12,6 +12,7 @@
 		3F1768392BEDFF0400AC3265 /* MyAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1768382BEDFF0400AC3265 /* MyAddressTableViewController.swift */; };
 		3F17683B2BEE025900AC3265 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17683A2BEE025900AC3265 /* AddressTableViewCell.swift */; };
 		3F17683D2BEE039000AC3265 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17683C2BEE039000AC3265 /* VehicleTableViewCell.swift */; };
+		3F4C3AEE2BF44EF300783C42 /* RideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C3AED2BF44EF300783C42 /* RideService.swift */; };
 		3FC48F942BE210B80032CB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48F932BE210B80032CB47 /* LoginViewController.swift */; };
 		3FFC61BE2BEF42DC0038DECF /* StartrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC61BD2BEF42DC0038DECF /* StartrideViewController.swift */; };
 		AF03351E2BDAB8B400F0C796 /* MyRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */; };
@@ -29,10 +30,8 @@
 		AF2C98392BDAA00B009DD59D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */; };
 		AF2C98412BDAA053009DD59D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98402BDAA053009DD59D /* ConversationViewController.swift */; };
 		AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */; };
-		AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C984F2BDAA230009DD59D /* bookingService.swift */; };
-		AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98512BDAA23D009DD59D /* publishService.swift */; };
-		AF2C98542BDAA24A009DD59D /* chatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98532BDAA24A009DD59D /* chatService.swift */; };
-		AF2C98562BDAA25B009DD59D /* authService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98552BDAA25B009DD59D /* authService.swift */; };
+		AF2C98542BDAA24A009DD59D /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98532BDAA24A009DD59D /* ChatService.swift */; };
+		AF2C98562BDAA25B009DD59D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2C98552BDAA25B009DD59D /* AuthService.swift */; };
 		AF37698B2BE6556A00527997 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37698A2BE6556A00527997 /* Vehicle.swift */; };
 		AF37698D2BE6560C00527997 /* Rides.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37698C2BE6560C00527997 /* Rides.swift */; };
 		AF37698F2BE6578E00527997 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37698E2BE6578E00527997 /* Booking.swift */; };
@@ -86,6 +85,7 @@
 		3F1768382BEDFF0400AC3265 /* MyAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressTableViewController.swift; sourceTree = "<group>"; };
 		3F17683A2BEE025900AC3265 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 		3F17683C2BEE039000AC3265 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		3F4C3AED2BF44EF300783C42 /* RideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideService.swift; sourceTree = "<group>"; };
 		3FC48F932BE210B80032CB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FFC61BD2BEF42DC0038DECF /* StartrideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartrideViewController.swift; sourceTree = "<group>"; };
 		AF03351D2BDAB8B300F0C796 /* MyRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideViewController.swift; sourceTree = "<group>"; };
@@ -107,10 +107,8 @@
 		AF2C98382BDAA00B009DD59D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		AF2C98402BDAA053009DD59D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		AF2C98422BDAA06C009DD59D /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
-		AF2C984F2BDAA230009DD59D /* bookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookingService.swift; sourceTree = "<group>"; };
-		AF2C98512BDAA23D009DD59D /* publishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publishService.swift; sourceTree = "<group>"; };
-		AF2C98532BDAA24A009DD59D /* chatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatService.swift; sourceTree = "<group>"; };
-		AF2C98552BDAA25B009DD59D /* authService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authService.swift; sourceTree = "<group>"; };
+		AF2C98532BDAA24A009DD59D /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		AF2C98552BDAA25B009DD59D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AF37698A2BE6556A00527997 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		AF37698C2BE6560C00527997 /* Rides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rides.swift; sourceTree = "<group>"; };
 		AF37698E2BE6578E00527997 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
@@ -329,10 +327,9 @@
 		AF2C984E2BDAA21C009DD59D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C984F2BDAA230009DD59D /* bookingService.swift */,
-				AF2C98512BDAA23D009DD59D /* publishService.swift */,
-				AF2C98532BDAA24A009DD59D /* chatService.swift */,
-				AF2C98552BDAA25B009DD59D /* authService.swift */,
+				AF2C98532BDAA24A009DD59D /* ChatService.swift */,
+				AF2C98552BDAA25B009DD59D /* AuthService.swift */,
+				3F4C3AED2BF44EF300783C42 /* RideService.swift */,
 				AF9ACA0A2BE5718F00C267AA /* UserService.swift */,
 			);
 			path = Services;
@@ -541,7 +538,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF37698B2BE6556A00527997 /* Vehicle.swift in Sources */,
-				AF2C98522BDAA23D009DD59D /* publishService.swift in Sources */,
 				3F1768372BEDFAEC00AC3265 /* MyVehicleTableViewController.swift in Sources */,
 				AF25009F2BEA937600FB5FBA /* FAQsTableViewController.swift in Sources */,
 				AFB480A02BE3B78B00E9EEEA /* FindTableViewController.swift in Sources */,
@@ -551,10 +547,10 @@
 				AF2C98062BDA9F2F009DD59D /* AppDelegate.swift in Sources */,
 				AFB611E92BE9CEC500B06404 /* ProfileTableViewController.swift in Sources */,
 				AFAB25532BE0FA2E002E756E /* College.swift in Sources */,
+				3F4C3AEE2BF44EF300783C42 /* RideService.swift in Sources */,
 				AF8F29652BE1FB11003A5256 /* ChatTableViewCell.swift in Sources */,
 				AFB611EB2BE9E27900B06404 /* SignupViewController.swift in Sources */,
-				AF2C98502BDAA230009DD59D /* bookingService.swift in Sources */,
-				AF2C98562BDAA25B009DD59D /* authService.swift in Sources */,
+				AF2C98562BDAA25B009DD59D /* AuthService.swift in Sources */,
 				3F1768352BEDF66300AC3265 /* AboutmeTableViewController.swift in Sources */,
 				AF37698D2BE6560C00527997 /* Rides.swift in Sources */,
 				AF37698F2BE6578E00527997 /* Booking.swift in Sources */,
@@ -570,7 +566,7 @@
 				AFB4809E2BE3B77100E9EEEA /* PostTableViewController.swift in Sources */,
 				AF9ACA0B2BE5718F00C267AA /* UserService.swift in Sources */,
 				AF37699D2BE7FF7800527997 /* OnboardingCollectionViewCell.swift in Sources */,
-				AF2C98542BDAA24A009DD59D /* chatService.swift in Sources */,
+				AF2C98542BDAA24A009DD59D /* ChatService.swift in Sources */,
 				AFAB255A2BE0FCED002E756E /* Message.swift in Sources */,
 				AFAB25582BE0FCD1002E756E /* Chat.swift in Sources */,
 				AF2C98432BDAA06C009DD59D /* ChatsViewController.swift in Sources */,

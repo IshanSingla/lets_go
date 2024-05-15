@@ -6,6 +6,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     private var data: [Rides] = []
     private var userRepo: UserRepository!
+    private var rideService: RideService!
     
 
     override func viewDidLoad() {
@@ -13,83 +14,35 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         userRepo = UserRepository()
-        let user = userRepo.findAll()
-        var vahicle = Vehicle(
-            id: "1",
-            userId: "1",
-            vehicleName: "Honda City",
-            vehicleNumber: "PB08 1234",
-            vehicleType: "Car"
-        )
-        let from = Address(
-            id: "1",
-            userId: "1",
-            address: "Chitkara University",
-            city: "Rajpura",
-            state: "Punjab",
-            country: "India",
-            pincode: "140401"
-        )
+        rideService = RideService()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            fetchMyRides()
+    }
         
-        let to = Address(
-            id: "1",
-            userId: "1",
-            address: "118/2 Rajpura",
-            city: "Rajpura",
-            state: "Punjab",
-            country: "India",
-            pincode: "140401"
-        )
-        data = [
-            Rides(
-                userId: "1",
-                user: user.first,
-                vehicleId: "1",
-                vehicle: vahicle,
-                fromId: "1",
-                toId: "1",
-                from: from,
-                to: to,
-                totalNoOfSeets: 3,
-                noOfSeetsAvailable: 3,
-                costPerSeet: 100,
-                dateTime: Date(),
-                bookings: []
-            ),
-            Rides(
-                userId: "1",
-                user: user[1],
-                vehicleId: "1",
-                vehicle: vahicle,
-                fromId: "1",
-                toId: "1",
-                from: from,
-                to: to,
-                totalNoOfSeets: 3,
-                noOfSeetsAvailable: 3,
-                costPerSeet: 100,
-                dateTime: Date(),
-                bookings: []
-            ),
-            Rides(
-                userId: "1",
-                user: user[1],
-                vehicleId: "1",
-                vehicle: vahicle,
-                fromId: "1",
-                toId: "1",
-                from: from,
-                to: to,
-                totalNoOfSeets: 3,
-                noOfSeetsAvailable: 3,
-                costPerSeet: 100,
-                dateTime: Date(),
-                bookings: []
-            ),
-        ]
-        // Do any additional setup after loading the view.
+    private func fetchMyPublishedRides() {
+            data = rideService.getAllRidesPublishedByCurrentUser()
+            tableView.reloadData()
     }
     
+    
+    public func fetchMyRides () {
+        data = rideService.getAllRidesBookedByCurrentUser()
+        tableView.reloadData()
+        
+    }
+    
+    @IBAction func onTabChnage(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            fetchMyRides()
+            
+        }else {
+            fetchMyPublishedRides()
+            
+        }
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -97,6 +50,7 @@ class MyRideViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let publish = data[indexPath.row]
+        print(publish)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ridecell") as! MyRideTableViewCell
         

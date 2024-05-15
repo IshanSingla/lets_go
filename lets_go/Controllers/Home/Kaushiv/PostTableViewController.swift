@@ -35,13 +35,19 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
             seatNo.text = "\(Int(seatCount.value))"
         }
     }
-    private var authService: AuthService = AuthService()
+    
+    private var user: User!
+    
+    private var rideService: RideService!
+    private var authService: AuthService!
     private var address: [Address] = []
     private let fromPlacePickerView = UIPickerView()
     private let toPlacePickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authService = AuthService()
+        rideService = RideService()
         fromPlacePickerView.dataSource = self
         fromPlacePickerView.delegate = self
         toPlacePickerView.dataSource = self
@@ -78,6 +84,19 @@ class PostTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
                     self.present(alert, animated: true, completion: nil)
                     return
                 }
+        if let user = try? authService.getCurrentUser() {
+            var ride: Rides = Rides(
+                userId: user.id,
+                vehicleId: user.vehicles!.first!.id,
+                fromId: fromAddress.id,
+                toId: toAddress.id,
+                totalNoOfSeets: Int(seatCount.value),
+                noOfSeetsAvailable: Int(seatCount.value),
+                costPerSeet: Float(offerPrice.text ?? "")!,
+                dateTime: datePicker.date
+            )
+            rideService.createRide(ride: ride)
+        }
         if let tabBarController = self.tabBarController {
             // Set the index of the tab you want to select
             tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
